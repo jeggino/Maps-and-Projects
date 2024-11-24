@@ -28,3 +28,4 @@ st.title(title)
 st.image(img)
 st.markdown(text)
 st.link_button("Link dashboard", link,icon='🦇')
+"---"
