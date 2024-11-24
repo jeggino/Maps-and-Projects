@@ -28,9 +28,9 @@ link = "https://ratten-terschelling-dashboard.streamlit.app/"
 
 #---APP---
 st.title(title)
-col_1,col_2 = st.columns([2,1])
 
-col_1.image(img)
-col_2.markdown(text)
-col_2.link_button("Link dashboard", link,icon=':rat:')
+
+st.image(img)
+st.markdown(text)
+st.link_button("Link dashboard", link,icon='🐀')
 
