@@ -12,17 +12,17 @@ st.markdown(reduce_header_height_style, unsafe_allow_html=True)
 #---COSTANTS---
 title = "SMP Terschelling 2025"
 text = """
-FAKE FAKE FAKE
+:rainbow[FAKE FAKE FAKE]
 """
 img = "images/smp_terschelling.jpg"
 link = "html/SMP-Terschelling-Bats.html"
 
 #---APP---
-# st.title(title)
+st.title(title)
 
 
 st.image(img)
-# st.markdown(text)
+st.markdown(text)
 with open(link, "rb") as file:
     btn = st.download_button(
         label=":rainbow[Download html file]",
