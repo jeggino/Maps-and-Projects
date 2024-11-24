@@ -23,6 +23,6 @@ link = "https://ratten-terschelling-dashboard.streamlit.app/"
 st.title(title)
 st.image(img)
 st.markdown(text)
-st.link_button("Link dashboard", link,icon='🐀')
+st.link_button(":rainbow[Link dashboard]", link,icon='🐀')
 "---"
 
