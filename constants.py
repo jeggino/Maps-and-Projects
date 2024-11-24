@@ -1,0 +1,1 @@
+IMAGE = "images/logo.png"
