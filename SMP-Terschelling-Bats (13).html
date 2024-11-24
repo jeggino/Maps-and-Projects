@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_51739c1f3b09f46b80fbdb47baf9d46b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 11px; }
+            </style>
+        
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+    
+                    <style>
+                        .foliumtooltip {
+                            background-color: white; color: black; font-family:courier new; font-size: 14px; padding: 10px;
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.control.layers.tree@1.1.0/L.Control.Layers.Tree.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.control.layers.tree@1.1.0/L.Control.Layers.Tree.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_51739c1f3b09f46b80fbdb47baf9d46b" ></div>
+        
+    
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Draggable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+  $( function() {
+    $( "#maplegend" ).draggable({
+                    start: function (event, ui) {
+                        $(this).css({
+                            right: "auto",
+                            top: "auto",
+                            bottom: "auto"
+                        });
+                    }
+                });
+});
+
+  </script>
+</head>
+<body>
+
+<div id='maplegend' class='maplegend' 
+    style='position: absolute; z-index: 9999; background-color: rgba(255, 255, 255, 0.7);
+     border-radius: 8px; padding: 10px; font-size: 12.2px; right: 10px; bottom: 35px; '>     
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+      <img src="https://www.elskenecologie.nl/wp-content/themes/elsken/assets/img/logo-mobile.png" style="background:green; width:30px;height:23px;">
+      <li>------------</li>
+    <li><strong>Sorten</strong></li>
+    <li><span style='background: green; opacity: 0.75;'></span>Gewone dwergvleermuis</li>
+    <li><span style='background: red; opacity: 0.75;'></span>Laatvlieger</li>
+    <li><span style='background: blue; opacity: 0.75;'></span>Watervleermuis</li>
+    <li><strong>Funtie</strong></li>
+    <li><span class="fa fa-circle" style="color:grey" opacity: 0.75;'></span>Geen / Ombekend</li>
+    <li><span class="fa fa-star" style="color:grey" opacity: 0.75;'></span>Zommerverblijf</li>
+    <li><span class="fa fa-baby" style="color:grey" opacity: 0.75;'></span>Kraamverblif</li>
+    <li><span class="fa fa-snowflake" style="color:grey" opacity: 0.75;'></span>Winterverblijf</li>
+    <li><span class="fa fa-heart" style="color:grey" opacity: 0.75;'></span>Paarverblijf</li>
+    <li><strong>Functiegebied</strong></li>
+    <li><span class="fa fa-object-ungroup" style="color:green" opacity: 0.75;'></span>Foerageergebied</li>
+    <li><span class="fa fa-object-ungroup" style="color:red" opacity: 0.75;'></span>Baltsterritorium</li>
+  </ul> 
+</body>
+</html>
+<style type='text/css'>
+  .maplegend .legend-scale ul {margin: 0; padding: 0; color: #0f0f0f;}
+  .maplegend .legend-scale ul li {list-style: none; line-height: 18px; margin-bottom: 1.5px;}
+  .maplegend ul.legend-labels li span {float: left; height: 16px; width: 16px; margin-right: 4.5px;}
+</style>
+
+</body>
+<script>
+    
+    
+            var map_51739c1f3b09f46b80fbdb47baf9d46b = L.map(
+                "map_51739c1f3b09f46b80fbdb47baf9d46b",
+                {
+                    center: [53.39112027737668, 5.295985235680006],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: false,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+
+            var geocoderOpts_geocoder_0e4ed7b78d5dfda0ad0c789d1b4b175a = {"collapsed": true, "defaultMarkGeocode": false, "position": "topleft", "provider": "nominatim", "providerOptions": {}, "zoom": 14};
+
+            // note: geocoder name should start with lowercase
+            var geocoderName_geocoder_0e4ed7b78d5dfda0ad0c789d1b4b175a = geocoderOpts_geocoder_0e4ed7b78d5dfda0ad0c789d1b4b175a["provider"];
+
+            var customGeocoder_geocoder_0e4ed7b78d5dfda0ad0c789d1b4b175a = L.Control.Geocoder[ geocoderName_geocoder_0e4ed7b78d5dfda0ad0c789d1b4b175a ](
+                geocoderOpts_geocoder_0e4ed7b78d5dfda0ad0c789d1b4b175a['providerOptions']
+            );
+            geocoderOpts_geocoder_0e4ed7b78d5dfda0ad0c789d1b4b175a["geocoder"] = customGeocoder_geocoder_0e4ed7b78d5dfda0ad0c789d1b4b175a;
+
+            L.Control.geocoder(
+                geocoderOpts_geocoder_0e4ed7b78d5dfda0ad0c789d1b4b175a
+            ).on('markgeocode', function(e) {
+                var zoom = geocoderOpts_geocoder_0e4ed7b78d5dfda0ad0c789d1b4b175a['zoom'] || map_51739c1f3b09f46b80fbdb47baf9d46b.getZoom();
+                map_51739c1f3b09f46b80fbdb47baf9d46b.setView(e.geocode.center, zoom);
+            }).addTo(map_51739c1f3b09f46b80fbdb47baf9d46b);
+
+        
+    
+            var measure_control_2a4fb7136c2719f08b872eeee835d0a9 = new L.Control.Measure(
+                {"collapsed": true, "measureDistancesAndAreas": "Meet afstanden en oppervlakten", "position": "topleft", "primaryAreaUnit": "sqmeters", "primaryLengthUnit": "meters", "secondaryAreaUnit": "acres", "secondaryLengthUnit": "miles"});
+            map_51739c1f3b09f46b80fbdb47baf9d46b.addControl(measure_control_2a4fb7136c2719f08b872eeee835d0a9);
+
+            // Workaround for using this plugin with Leaflet>=1.8.0
+            // https://github.com/ljagis/leaflet-measure/issues/171
+            L.Control.Measure.include({
+                _setCaptureMarkerIcon: function () {
+                    // disable autopan
+                    this._captureMarker.options.autoPanOnFocus = false;
+                    // default function
+                    this._captureMarker.setIcon(
+                        L.divIcon({
+                            iconSize: this._map.getSize().multiplyBy(2)
+                        })
+                    );
+                },
+            });
+
+        
+    
+            var feature_group_a25cca5b6c721611e83cb918b027331a = L.featureGroup(
+                {}
+            );
+        
+    
+        function geo_json_8a8f72f3a4833f7a2900e581c3937b3e_styler(feature) {
+            switch(feature.id) {
+                case "0": case "17": case "33": 
+                    return {"icon": "baby", "iconColor": "green", "markerColor": "lightgreen"};
+                case "1": case "11": case "12": case "13": case "14": case "15": case "18": case "20": case "21": case "22": case "28": case "29": case "30": case "35": case "37": case "38": case "39": case "40": case "41": case "44": case "46": 
+                    return {"icon": "circle", "iconColor": "green", "markerColor": "lightgreen"};
+                case "2": case "3": case "5": case "9": case "10": case "24": case "25": case "31": case "34": case "36": case "42": case "47": case "48": case "49": 
+                    return {"icon": "heart", "iconColor": "green", "markerColor": "lightgreen"};
+                case "4": case "7": case "23": case "27": case "32": case "43": 
+                    return {"icon": "star", "iconColor": "green", "markerColor": "lightgreen"};
+                case "6": case "26": 
+                    return {"icon": "snowflake", "iconColor": "green", "markerColor": "lightgreen"};
+                default:
+                    return {"icon": "circle", "iconColor": "darkpurple", "markerColor": "purple"};
+            }
+        }
+        function geo_json_8a8f72f3a4833f7a2900e581c3937b3e_pointToLayer(feature, latlng) {
+            var opts = {};
+            
+            const iconOptions = {"extraClasses": "fa-rotate-0", "icon": "functie_shape", "iconColor": "soort_color", "markerColor": "icon_color", "prefix": "fa"}
+            const iconRootAlias = L.AwesomeMarkers
+            opts.icon = new iconRootAlias.Icon(iconOptions)
+            
+            let style = geo_json_8a8f72f3a4833f7a2900e581c3937b3e_styler(feature)
+            Object.assign(opts.icon.options, style)
+            
+            return new L.Marker(latlng, opts)
+        }
+
+        function geo_json_8a8f72f3a4833f7a2900e581c3937b3e_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8a8f72f3a4833f7a2900e581c3937b3e = L.geoJson(null, {
+                onEachFeature: geo_json_8a8f72f3a4833f7a2900e581c3937b3e_onEachFeature,
+            
+                style: geo_json_8a8f72f3a4833f7a2900e581c3937b3e_styler,
+                pointToLayer: geo_json_8a8f72f3a4833f7a2900e581c3937b3e_pointToLayer,
+        });
+
+        function geo_json_8a8f72f3a4833f7a2900e581c3937b3e_add (data) {
+            geo_json_8a8f72f3a4833f7a2900e581c3937b3e
+                .addData(data);
+        }
+            geo_json_8a8f72f3a4833f7a2900e581c3937b3e_add({"bbox": [5.213361362924815, 53.360333712183476, 5.380900192012883, 53.40452304161213], "features": [{"bbox": [5.34595692100007, 53.3972110090102, 5.34595692100007, 53.3972110090102], "geometry": {"coordinates": [5.34595692100007, 53.3972110090102], "type": "Point"}, "id": "0", "properties": {"Wijk": "Hoorn", "behaviour": "zwermend", "date": "2025-05-21", "functie": "kraamverblijf", "functie_shape": "baby", "icon_color": "lightgreen", "lat": 5.34595692100007, "lng": 53.3972110090102, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "dakpan"}, "type": "Feature"}, {"bbox": [5.215596844636802, 53.365724357339964, 5.215596844636802, 53.365724357339964], "geometry": {"coordinates": [5.215596844636802, 53.365724357339964], "type": "Point"}, "id": "1", "properties": {"Wijk": "West Terschelling", "behaviour": "verkeersslachtoffer", "date": "2025-06-03", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "lightgreen", "lat": 5.215596844636802, "lng": 53.365724357339964, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "schors"}, "type": "Feature"}, {"bbox": [5.213616531240783, 53.36247918006503, 5.213616531240783, 53.36247918006503], "geometry": {"coordinates": [5.213616531240783, 53.36247918006503], "type": "Point"}, "id": "2", "properties": {"Wijk": "West Terschelling", "behaviour": "invliegend", "date": "2025-07-14", "functie": "paarverblijf", "functie_shape": "heart", "icon_color": "lightgreen", "lat": 5.213616531240783, "lng": 53.36247918006503, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "luik"}, "type": "Feature"}, {"bbox": [5.22345620687462, 53.366096262549796, 5.22345620687462, 53.366096262549796], "geometry": {"coordinates": [5.22345620687462, 53.366096262549796], "type": "Point"}, "id": "3", "properties": {"Wijk": "West Terschelling", "behaviour": "verkeersslachtoffer", "date": "2025-06-14", "functie": "paarverblijf", "functie_shape": "heart", "icon_color": "lightgreen", "lat": 5.22345620687462, "lng": 53.366096262549796, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "vleermuiskast"}, "type": "Feature"}, {"bbox": [5.30241065236156, 53.38705275328049, 5.30241065236156, 53.38705275328049], "geometry": {"coordinates": [5.30241065236156, 53.38705275328049], "type": "Point"}, "id": "4", "properties": {"Wijk": "Landerum", "behaviour": "zwermend", "date": "2025-08-26", "functie": "zommerverblijf", "functie_shape": "star", "icon_color": "lightgreen", "lat": 5.30241065236156, "lng": 53.38705275328049, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "kantpan"}, "type": "Feature"}, {"bbox": [5.286632090315327, 53.403685433400334, 5.286632090315327, 53.403685433400334], "geometry": {"coordinates": [5.286632090315327, 53.403685433400334], "type": "Point"}, "id": "5", "properties": {"Wijk": "Midsland aan Zee", "behaviour": "uitvliegend", "date": "2025-05-21", "functie": "paarverblijf", "functie_shape": "heart", "icon_color": "lightgreen", "lat": 5.286632090315327, "lng": 53.403685433400334, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "openingen in dak"}, "type": "Feature"}, {"bbox": [5.255024587238263, 53.399056393319015, 5.255024587238263, 53.399056393319015], "geometry": {"coordinates": [5.255024587238263, 53.399056393319015], "type": "Point"}, "id": "6", "properties": {"Wijk": "West aa Zee", "behaviour": "zwermend", "date": "2025-06-03", "functie": "winterverblijf", "functie_shape": "snowflake", "icon_color": "lightgreen", "lat": 5.255024587238263, "lng": 53.399056393319015, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "spouwmuur"}, "type": "Feature"}, {"bbox": [5.344500049862062, 53.39551672965379, 5.344500049862062, 53.39551672965379], "geometry": {"coordinates": [5.344500049862062, 53.39551672965379], "type": "Point"}, "id": "7", "properties": {"Wijk": "Hoorn", "behaviour": "overvliegend", "date": "2025-06-03", "functie": "zommerverblijf", "functie_shape": "star", "icon_color": "lightgreen", "lat": 5.344500049862062, "lng": 53.39551672965379, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "kantpan"}, "type": "Feature"}, {"bbox": [5.309115002402226, 53.38790490875984, 5.309115002402226, 53.38790490875984], "geometry": {"coordinates": [5.309115002402226, 53.38790490875984], "type": "Point"}, "id": "8", "properties": {"Wijk": "Formerum", "behaviour": "overvliegend", "date": "2025-08-26", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "purple", "lat": 5.309115002402226, "lng": 53.38790490875984, "opmerking": null, "soort": "Laatvlieger", "soort_color": "darkpurple", "verblijf": "dakgoot"}, "type": "Feature"}, {"bbox": [5.258842083298726, 53.399347647711416, 5.258842083298726, 53.399347647711416], "geometry": {"coordinates": [5.258842083298726, 53.399347647711416], "type": "Point"}, "id": "9", "properties": {"Wijk": "West aa Zee", "behaviour": "sporen", "date": "2025-05-21", "functie": "paarverblijf", "functie_shape": "heart", "icon_color": "lightgreen", "lat": 5.258842083298726, "lng": 53.399347647711416, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "schoorsteen"}, "type": "Feature"}, {"bbox": [5.261493024832103, 53.398086889469575, 5.261493024832103, 53.398086889469575], "geometry": {"coordinates": [5.261493024832103, 53.398086889469575], "type": "Point"}, "id": "10", "properties": {"Wijk": "West aa Zee", "behaviour": "kolonie in boom", "date": "2025-07-14", "functie": "paarverblijf", "functie_shape": "heart", "icon_color": "lightgreen", "lat": 5.261493024832103, "lng": 53.398086889469575, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "daklijst"}, "type": "Feature"}, {"bbox": [5.354254294576398, 53.3980011272685, 5.354254294576398, 53.3980011272685], "geometry": {"coordinates": [5.354254294576398, 53.3980011272685], "type": "Point"}, "id": "11", "properties": {"Wijk": "Hoorn", "behaviour": "uitvliegend", "date": "2025-06-14", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "lightgreen", "lat": 5.354254294576398, "lng": 53.3980011272685, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "schoorsteen"}, "type": "Feature"}, {"bbox": [5.260694804897194, 53.39872834666443, 5.260694804897194, 53.39872834666443], "geometry": {"coordinates": [5.260694804897194, 53.39872834666443], "type": "Point"}, "id": "12", "properties": {"Wijk": "West aa Zee", "behaviour": "foeragerend", "date": "2025-06-03", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "lightgreen", "lat": 5.260694804897194, "lng": 53.39872834666443, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "schoorsteen"}, "type": "Feature"}, {"bbox": [5.326096736015209, 53.3929048331117, 5.326096736015209, 53.3929048331117], "geometry": {"coordinates": [5.326096736015209, 53.3929048331117], "type": "Point"}, "id": "13", "properties": {"Wijk": "Lies", "behaviour": "zwermend", "date": "2025-06-03", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "lightgreen", "lat": 5.326096736015209, "lng": 53.3929048331117, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "luik"}, "type": "Feature"}, {"bbox": [5.299087872297074, 53.386030633333654, 5.299087872297074, 53.386030633333654], "geometry": {"coordinates": [5.299087872297074, 53.386030633333654], "type": "Point"}, "id": "14", "properties": {"Wijk": "Landerum", "behaviour": "balts", "date": "2025-08-26", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "lightgreen", "lat": 5.299087872297074, "lng": 53.386030633333654, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "gevelbetimmering"}, "type": "Feature"}, {"bbox": [5.276385333888169, 53.37803821992594, 5.276385333888169, 53.37803821992594], "geometry": {"coordinates": [5.276385333888169, 53.37803821992594], "type": "Point"}, "id": "15", "properties": {"Wijk": "Baaiduinen", "behaviour": "foeragerend", "date": "2025-09-03", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "lightgreen", "lat": 5.276385333888169, "lng": 53.37803821992594, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "spouwmuur"}, "type": "Feature"}, {"bbox": [5.316288624309191, 53.39127034655751, 5.316288624309191, 53.39127034655751], "geometry": {"coordinates": [5.316288624309191, 53.39127034655751], "type": "Point"}, "id": "16", "properties": {"Wijk": "Formerum", "behaviour": "foeragerend", "date": "2025-07-04", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "purple", "lat": 5.316288624309191, "lng": 53.39127034655751, "opmerking": null, "soort": "Laatvlieger", "soort_color": "darkpurple", "verblijf": "spouwmuur"}, "type": "Feature"}, {"bbox": [5.328900495269951, 53.39692462409492, 5.328900495269951, 53.39692462409492], "geometry": {"coordinates": [5.328900495269951, 53.39692462409492], "type": "Point"}, "id": "17", "properties": {"Wijk": "Lies", "behaviour": "foeragerend", "date": "2025-05-24", "functie": "kraamverblijf", "functie_shape": "baby", "icon_color": "lightgreen", "lat": 5.328900495269951, "lng": 53.39692462409492, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "openingen in dak"}, "type": "Feature"}, {"bbox": [5.285495293781555, 53.40339967080209, 5.285495293781555, 53.40339967080209], "geometry": {"coordinates": [5.285495293781555, 53.40339967080209], "type": "Point"}, "id": "18", "properties": {"Wijk": "Midsland aan Zee", "behaviour": "invliegend", "date": "2025-06-03", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "lightgreen", "lat": 5.285495293781555, "lng": 53.40339967080209, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "daklijst"}, "type": "Feature"}, {"bbox": [5.28537499791917, 53.40307613759226, 5.28537499791917, 53.40307613759226], "geometry": {"coordinates": [5.28537499791917, 53.40307613759226], "type": "Point"}, "id": "19", "properties": {"Wijk": "Midsland aan Zee", "behaviour": "balts", "date": "2025-07-04", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "purple", "lat": 5.28537499791917, "lng": 53.40307613759226, "opmerking": null, "soort": "Laatvlieger", "soort_color": "darkpurple", "verblijf": "spouwmuur"}, "type": "Feature"}, {"bbox": [5.289227568077112, 53.38258374332061, 5.289227568077112, 53.38258374332061], "geometry": {"coordinates": [5.289227568077112, 53.38258374332061], "type": "Point"}, "id": "20", "properties": {"Wijk": "Midsland", "behaviour": "invliegend", "date": "2025-05-21", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "lightgreen", "lat": 5.289227568077112, "lng": 53.38258374332061, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "scheur"}, "type": "Feature"}, {"bbox": [5.324536549694154, 53.39329913475672, 5.324536549694154, 53.39329913475672], "geometry": {"coordinates": [5.324536549694154, 53.39329913475672], "type": "Point"}, "id": "21", "properties": {"Wijk": "Lies", "behaviour": "sporen", "date": "2025-06-18", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "lightgreen", "lat": 5.324536549694154, "lng": 53.39329913475672, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "daklijst"}, "type": "Feature"}, {"bbox": [5.36422739762748, 53.40178303192814, 5.36422739762748, 53.40178303192814], "geometry": {"coordinates": [5.36422739762748, 53.40178303192814], "type": "Point"}, "id": "22", "properties": {"Wijk": "Oosterend", "behaviour": "balts", "date": "2025-06-03", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "lightgreen", "lat": 5.36422739762748, "lng": 53.40178303192814, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "dakpan"}, "type": "Feature"}, {"bbox": [5.3454132749820635, 53.398803726412865, 5.3454132749820635, 53.398803726412865], "geometry": {"coordinates": [5.3454132749820635, 53.398803726412865], "type": "Point"}, "id": "23", "properties": {"Wijk": "Hoorn", "behaviour": "overvliegend", "date": "2025-09-03", "functie": "zommerverblijf", "functie_shape": "star", "icon_color": "lightgreen", "lat": 5.3454132749820635, "lng": 53.398803726412865, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "vleermuiskast"}, "type": "Feature"}, {"bbox": [5.340724042376115, 53.398026326734346, 5.340724042376115, 53.398026326734346], "geometry": {"coordinates": [5.340724042376115, 53.398026326734346], "type": "Point"}, "id": "24", "properties": {"Wijk": "Hoorn", "behaviour": "foeragerend", "date": "2025-07-14", "functie": "paarverblijf", "functie_shape": "heart", "icon_color": "lightgreen", "lat": 5.340724042376115, "lng": 53.398026326734346, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "holte"}, "type": "Feature"}, {"bbox": [5.352040400815594, 53.399209019681884, 5.352040400815594, 53.399209019681884], "geometry": {"coordinates": [5.352040400815594, 53.399209019681884], "type": "Point"}, "id": "25", "properties": {"Wijk": "Hoorn", "behaviour": "sporen", "date": "2025-07-14", "functie": "paarverblijf", "functie_shape": "heart", "icon_color": "lightgreen", "lat": 5.352040400815594, "lng": 53.399209019681884, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "vleermuiskast"}, "type": "Feature"}, {"bbox": [5.258662937655919, 53.399064181721116, 5.258662937655919, 53.399064181721116], "geometry": {"coordinates": [5.258662937655919, 53.399064181721116], "type": "Point"}, "id": "26", "properties": {"Wijk": "West aa Zee", "behaviour": "kolonie in bebouwing", "date": "2025-09-03", "functie": "winterverblijf", "functie_shape": "snowflake", "icon_color": "lightgreen", "lat": 5.258662937655919, "lng": 53.399064181721116, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "nokpan"}, "type": "Feature"}, {"bbox": [5.326338500180193, 53.393753622025606, 5.326338500180193, 53.393753622025606], "geometry": {"coordinates": [5.326338500180193, 53.393753622025606], "type": "Point"}, "id": "27", "properties": {"Wijk": "Lies", "behaviour": "overvliegend", "date": "2025-09-03", "functie": "zommerverblijf", "functie_shape": "star", "icon_color": "lightgreen", "lat": 5.326338500180193, "lng": 53.393753622025606, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "regenpijp"}, "type": "Feature"}, {"bbox": [5.25613777016143, 53.39854438854253, 5.25613777016143, 53.39854438854253], "geometry": {"coordinates": [5.25613777016143, 53.39854438854253], "type": "Point"}, "id": "28", "properties": {"Wijk": "West aa Zee", "behaviour": "kolonie in boom", "date": "2025-09-03", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "lightgreen", "lat": 5.25613777016143, "lng": 53.39854438854253, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "holte"}, "type": "Feature"}, {"bbox": [5.299521776494033, 53.38589211314748, 5.299521776494033, 53.38589211314748], "geometry": {"coordinates": [5.299521776494033, 53.38589211314748], "type": "Point"}, "id": "29", "properties": {"Wijk": "Landerum", "behaviour": "kolonie in boom", "date": "2025-05-21", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "lightgreen", "lat": 5.299521776494033, "lng": 53.38589211314748, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "holte"}, "type": "Feature"}, {"bbox": [5.309775808306201, 53.387498652804034, 5.309775808306201, 53.387498652804034], "geometry": {"coordinates": [5.309775808306201, 53.387498652804034], "type": "Point"}, "id": "30", "properties": {"Wijk": "Formerum", "behaviour": "uitvliegend", "date": "2025-06-18", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "lightgreen", "lat": 5.309775808306201, "lng": 53.387498652804034, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "raamkozijn"}, "type": "Feature"}, {"bbox": [5.284500577719506, 53.38003798578795, 5.284500577719506, 53.38003798578795], "geometry": {"coordinates": [5.284500577719506, 53.38003798578795], "type": "Point"}, "id": "31", "properties": {"Wijk": "Midsland", "behaviour": "balts", "date": "2025-06-14", "functie": "paarverblijf", "functie_shape": "heart", "icon_color": "lightgreen", "lat": 5.284500577719506, "lng": 53.38003798578795, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "schoorsteen"}, "type": "Feature"}, {"bbox": [5.376710755515613, 53.40343413397373, 5.376710755515613, 53.40343413397373], "geometry": {"coordinates": [5.376710755515613, 53.40343413397373], "type": "Point"}, "id": "32", "properties": {"Wijk": "Oosterend", "behaviour": "overvliegend", "date": "2025-05-24", "functie": "zommerverblijf", "functie_shape": "star", "icon_color": "lightgreen", "lat": 5.376710755515613, "lng": 53.40343413397373, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "raamkozijn"}, "type": "Feature"}, {"bbox": [5.285017866250633, 53.40315527725986, 5.285017866250633, 53.40315527725986], "geometry": {"coordinates": [5.285017866250633, 53.40315527725986], "type": "Point"}, "id": "33", "properties": {"Wijk": "Midsland aan Zee", "behaviour": "uitvliegend", "date": "2025-06-14", "functie": "kraamverblijf", "functie_shape": "baby", "icon_color": "lightgreen", "lat": 5.285017866250633, "lng": 53.40315527725986, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "schors"}, "type": "Feature"}, {"bbox": [5.216891407380467, 53.363543417424246, 5.216891407380467, 53.363543417424246], "geometry": {"coordinates": [5.216891407380467, 53.363543417424246], "type": "Point"}, "id": "34", "properties": {"Wijk": "West Terschelling", "behaviour": "sporen", "date": "2025-07-14", "functie": "paarverblijf", "functie_shape": "heart", "icon_color": "lightgreen", "lat": 5.216891407380467, "lng": 53.363543417424246, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "..ander"}, "type": "Feature"}, {"bbox": [5.380900192012883, 53.40452304161213, 5.380900192012883, 53.40452304161213], "geometry": {"coordinates": [5.380900192012883, 53.40452304161213], "type": "Point"}, "id": "35", "properties": {"Wijk": "Oosterend", "behaviour": "overvliegend", "date": "2025-05-21", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "lightgreen", "lat": 5.380900192012883, "lng": 53.40452304161213, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "gevelbetimmering"}, "type": "Feature"}, {"bbox": [5.213361362924815, 53.360333712183476, 5.213361362924815, 53.360333712183476], "geometry": {"coordinates": [5.213361362924815, 53.360333712183476], "type": "Point"}, "id": "36", "properties": {"Wijk": "West Terschelling", "behaviour": "uitvliegend", "date": "2025-07-04", "functie": "paarverblijf", "functie_shape": "heart", "icon_color": "lightgreen", "lat": 5.213361362924815, "lng": 53.360333712183476, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "scheur"}, "type": "Feature"}, {"bbox": [5.325817115511116, 53.39530550871433, 5.325817115511116, 53.39530550871433], "geometry": {"coordinates": [5.325817115511116, 53.39530550871433], "type": "Point"}, "id": "37", "properties": {"Wijk": "Lies", "behaviour": "kolonie in boom", "date": "2025-07-04", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "lightgreen", "lat": 5.325817115511116, "lng": 53.39530550871433, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "nokpan"}, "type": "Feature"}, {"bbox": [5.300497007652039, 53.38608412278762, 5.300497007652039, 53.38608412278762], "geometry": {"coordinates": [5.300497007652039, 53.38608412278762], "type": "Point"}, "id": "38", "properties": {"Wijk": "Landerum", "behaviour": "foeragerend", "date": "2025-05-24", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "lightgreen", "lat": 5.300497007652039, "lng": 53.38608412278762, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "vleermuiskast"}, "type": "Feature"}, {"bbox": [5.283054906312163, 53.40355121353448, 5.283054906312163, 53.40355121353448], "geometry": {"coordinates": [5.283054906312163, 53.40355121353448], "type": "Point"}, "id": "39", "properties": {"Wijk": "Midsland aan Zee", "behaviour": "balts", "date": "2025-09-03", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "lightgreen", "lat": 5.283054906312163, "lng": 53.40355121353448, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "gevelbetimmering"}, "type": "Feature"}, {"bbox": [5.328814554297771, 53.39463766436605, 5.328814554297771, 53.39463766436605], "geometry": {"coordinates": [5.328814554297771, 53.39463766436605], "type": "Point"}, "id": "40", "properties": {"Wijk": "Lies", "behaviour": "foeragerend", "date": "2025-08-26", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "lightgreen", "lat": 5.328814554297771, "lng": 53.39463766436605, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "..ander"}, "type": "Feature"}, {"bbox": [5.2569291991982325, 53.399350337088784, 5.2569291991982325, 53.399350337088784], "geometry": {"coordinates": [5.2569291991982325, 53.399350337088784], "type": "Point"}, "id": "41", "properties": {"Wijk": "West aa Zee", "behaviour": "sporen", "date": "2025-07-04", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "lightgreen", "lat": 5.2569291991982325, "lng": 53.399350337088784, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "luik"}, "type": "Feature"}, {"bbox": [5.325265332031917, 53.394095375806806, 5.325265332031917, 53.394095375806806], "geometry": {"coordinates": [5.325265332031917, 53.394095375806806], "type": "Point"}, "id": "42", "properties": {"Wijk": "Lies", "behaviour": "kolonie in bebouwing", "date": "2025-05-24", "functie": "paarverblijf", "functie_shape": "heart", "icon_color": "lightgreen", "lat": 5.325265332031917, "lng": 53.394095375806806, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "dakgoot"}, "type": "Feature"}, {"bbox": [5.254394880138303, 53.39802726050364, 5.254394880138303, 53.39802726050364], "geometry": {"coordinates": [5.254394880138303, 53.39802726050364], "type": "Point"}, "id": "43", "properties": {"Wijk": "West aa Zee", "behaviour": "verkeersslachtoffer", "date": "2025-05-24", "functie": "zommerverblijf", "functie_shape": "star", "icon_color": "lightgreen", "lat": 5.254394880138303, "lng": 53.39802726050364, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "..ander"}, "type": "Feature"}, {"bbox": [5.344443854806601, 53.396342142847836, 5.344443854806601, 53.396342142847836], "geometry": {"coordinates": [5.344443854806601, 53.396342142847836], "type": "Point"}, "id": "44", "properties": {"Wijk": "Hoorn", "behaviour": "uitvliegend", "date": "2025-06-18", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "lightgreen", "lat": 5.344443854806601, "lng": 53.396342142847836, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "daklijst"}, "type": "Feature"}, {"bbox": [5.290226719860714, 53.40262578658854, 5.290226719860714, 53.40262578658854], "geometry": {"coordinates": [5.290226719860714, 53.40262578658854], "type": "Point"}, "id": "45", "properties": {"Wijk": "Midsland aan Zee", "behaviour": "balts", "date": "2025-09-03", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "purple", "lat": 5.290226719860714, "lng": 53.40262578658854, "opmerking": null, "soort": "Laatvlieger", "soort_color": "darkpurple", "verblijf": "holte"}, "type": "Feature"}, {"bbox": [5.225288972884396, 53.36793106526222, 5.225288972884396, 53.36793106526222], "geometry": {"coordinates": [5.225288972884396, 53.36793106526222], "type": "Point"}, "id": "46", "properties": {"Wijk": "West Terschelling", "behaviour": "kolonie in boom", "date": "2025-06-03", "functie": "geen / onbekend", "functie_shape": "circle", "icon_color": "lightgreen", "lat": 5.225288972884396, "lng": 53.36793106526222, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "holte"}, "type": "Feature"}, {"bbox": [5.217922457760165, 53.36399062705318, 5.217922457760165, 53.36399062705318], "geometry": {"coordinates": [5.217922457760165, 53.36399062705318], "type": "Point"}, "id": "47", "properties": {"Wijk": "West Terschelling", "behaviour": "uitvliegend", "date": "2025-05-24", "functie": "paarverblijf", "functie_shape": "heart", "icon_color": "lightgreen", "lat": 5.217922457760165, "lng": 53.36399062705318, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "dakkapel"}, "type": "Feature"}, {"bbox": [5.364170205417331, 53.40228013723101, 5.364170205417331, 53.40228013723101], "geometry": {"coordinates": [5.364170205417331, 53.40228013723101], "type": "Point"}, "id": "48", "properties": {"Wijk": "Oosterend", "behaviour": "kolonie in bebouwing", "date": "2025-05-24", "functie": "paarverblijf", "functie_shape": "heart", "icon_color": "lightgreen", "lat": 5.364170205417331, "lng": 53.40228013723101, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "dakpan"}, "type": "Feature"}, {"bbox": [5.3092259429388795, 53.38777161382218, 5.3092259429388795, 53.38777161382218], "geometry": {"coordinates": [5.3092259429388795, 53.38777161382218], "type": "Point"}, "id": "49", "properties": {"Wijk": "Formerum", "behaviour": "kolonie in bebouwing", "date": "2025-06-18", "functie": "paarverblijf", "functie_shape": "heart", "icon_color": "lightgreen", "lat": 5.3092259429388795, "lng": 53.38777161382218, "opmerking": null, "soort": "Gewone dwergvleermuis", "soort_color": "green", "verblijf": "openingen in dak"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_8a8f72f3a4833f7a2900e581c3937b3e.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["Wijk", "date", "soort", "behaviour", "functie", "verblijf", "opmerking"];
+    let aliases = ["Wijk", "Datum", "Soort", "Gedracht", "Functie", "Verblijf", "Opmerking"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumtooltip", "sticky": true});
+                     
+    
+            geo_json_8a8f72f3a4833f7a2900e581c3937b3e.addTo(feature_group_a25cca5b6c721611e83cb918b027331a);
+        
+    
+            var tile_layer_837b827d5239a5ee1a33acfc371b7f7a = L.tileLayer(
+                "https://api.mapbox.com/styles/v1/jeggino/cm2vvzm1g00mw01o08r2i5vjo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiamVnZ2lubyIsImEiOiJjbHdscmRkZHAxMTl1MmlyeTJpb3Z2eHdzIn0.N9TRN7xxTikk235dVs1YeQ",
+                {"attribution": "XXX Mapbox Attribution", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_837b827d5239a5ee1a33acfc371b7f7a.addTo(feature_group_a25cca5b6c721611e83cb918b027331a);
+        
+    
+            feature_group_a25cca5b6c721611e83cb918b027331a.addTo(map_51739c1f3b09f46b80fbdb47baf9d46b);
+        
+    
+            var feature_group_ddd72be1019de98820d62b263c11b898 = L.featureGroup(
+                {}
+            );
+        
+    
+        function geo_json_bdfd2e74d31a91b0854555a4d8874b82_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "red", "fillOpacity": 0.5, "weight": 0.4};
+            }
+        }
+
+        function geo_json_bdfd2e74d31a91b0854555a4d8874b82_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_bdfd2e74d31a91b0854555a4d8874b82 = L.geoJson(null, {
+                onEachFeature: geo_json_bdfd2e74d31a91b0854555a4d8874b82_onEachFeature,
+            
+                style: geo_json_bdfd2e74d31a91b0854555a4d8874b82_styler,
+        });
+
+        function geo_json_bdfd2e74d31a91b0854555a4d8874b82_add (data) {
+            geo_json_bdfd2e74d31a91b0854555a4d8874b82
+                .addData(data);
+        }
+            geo_json_bdfd2e74d31a91b0854555a4d8874b82_add({"bbox": [5.268728734780893, 53.37379215906745, 5.280191076790885, 53.37969082267227], "features": [{"bbox": [5.268728734780893, 53.37379215906745, 5.280191076790885, 53.37969082267227], "geometry": {"coordinates": [[[5.273682623691911, 53.37392012726781], [5.275748087261775, 53.37379215906745], [5.277878247808928, 53.37386276105386], [5.278114932314082, 53.37473350926382], [5.277799352973574, 53.37586310203645], [5.276615930447917, 53.37661614724101], [5.276300351107409, 53.37739271116217], [5.27756266846842, 53.37772215824458], [5.280191076790885, 53.37837307996401], [5.280191076789805, 53.37922020495981], [5.279481023274343, 53.37969082267227], [5.278337048164985, 53.379290797948215], [5.276995835968592, 53.379196673937315], [5.275970203112706, 53.379196673937315], [5.275417939267101, 53.379290797948215], [5.274431753828395, 53.379267266964746], [5.273800595147435, 53.37867898816006], [5.273051094213912, 53.37811423286226], [5.272696067456195, 53.37804363792344], [5.272002872166723, 53.37770456841088], [5.270661658240982, 53.37742218524485], [5.269320446044617, 53.37713980019845], [5.268728734780893, 53.37648089447475], [5.2698727098902225, 53.375916110026], [5.272002870437376, 53.376151437789474], [5.273462424886304, 53.37598670849164], [5.273406491769549, 53.37476734083552], [5.273682623691911, 53.37392012726781]]], "type": "Polygon"}, "id": "0", "properties": {"Wijk": "Baaiduinen", "kraamverblijf": 0, "paarverblijf": 0, "winterverblijf": 0, "zommerverblijf": 0}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_bdfd2e74d31a91b0854555a4d8874b82.bindTooltip(
+                `<div style="background-color: white; color: black; font-family:courier new; font-size: 14px; padding: 10px;">
+                     Klik op de veelhoek om de grafiek te zien
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        var popup_ae275490d9ba8c6476e460705c2cef71 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var i_frame_543cc0bf73395adccd4ea42c253833ef = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8IURPQ1RZUEUgaHRtbD4KPGh0bWw+CjxoZWFkPgogIDxzdHlsZT4KICAgICN2aXMudmVnYS1lbWJlZCB7CiAgICAgIHdpZHRoOiAxMDAlOwogICAgICBkaXNwbGF5OiBmbGV4OwogICAgfQoKICAgICN2aXMudmVnYS1lbWJlZCBkZXRhaWxzLAogICAgI3Zpcy52ZWdhLWVtYmVkIGRldGFpbHMgc3VtbWFyeSB7CiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTsKICAgIH0KICA8L3N0eWxlPgogIDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9ucG0vdmVnYUA1Ij48L3NjcmlwdD4KICA8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL3ZlZ2EtbGl0ZUA1LjguMCI+PC9zY3JpcHQ+CiAgPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS92ZWdhLWVtYmVkQDYiPjwvc2NyaXB0Pgo8L2hlYWQ+Cjxib2R5PgogIDxkaXYgaWQ9InZpcyI+PC9kaXY+CiAgPHNjcmlwdD4KICAgIChmdW5jdGlvbih2ZWdhRW1iZWQpIHsKICAgICAgdmFyIHNwZWMgPSB7ImNvbmZpZyI6IHsidmlldyI6IHsiY29udGludW91c1dpZHRoIjogMzAwLCAiY29udGludW91c0hlaWdodCI6IDMwMCwgInN0cm9rZSI6IG51bGx9fSwgImRhdGEiOiB7Im5hbWUiOiAiZGF0YS04NjhiMTk0NWM1NDgyODFlMGY5MjAyOWVjOWM5NTNlNSJ9LCAibWFyayI6IHsidHlwZSI6ICJiYXIiLCAiY29ybmVyUmFkaXVzVG9wTGVmdCI6IDgsICJjb3JuZXJSYWRpdXNUb3BSaWdodCI6IDh9LCAiZW5jb2RpbmciOiB7ImNvbG9yIjogeyJjb25kaXRpb24iOiB7InRlc3QiOiAiKGRhdHVtLldpamsgPT09ICdCYWFpZHVpbmVuJykiLCAidmFsdWUiOiAiUmVkIn0sICJ2YWx1ZSI6ICJsaWdodGdyZXkifSwgImNvbHVtbiI6IHsiZmllbGQiOiAidmFyaWFibGUiLCAiaGVhZGVyIjogeyJsYWJlbEZvbnRXZWlnaHQiOiA2MDB9LCAic3BhY2luZyI6IDEyLCAidGl0bGUiOiBudWxsLCAidHlwZSI6ICJub21pbmFsIn0sICJ0b29sdGlwIjogW3siZmllbGQiOiAiV2lqayIsICJ0aXRsZSI6ICJHZWJpZWQiLCAidHlwZSI6ICJub21pbmFsIn0sIHsiZmllbGQiOiAidmFsdWUiLCAidGl0bGUiOiAiQWFudGFsIiwgInR5cGUiOiAicXVhbnRpdGF0aXZlIn1dLCAieCI6IHsiYXhpcyI6IHsiZ3JpZCI6IGZhbHNlLCAibGFiZWxzIjogdHJ1ZSwgInRpY2tzIjogZmFsc2V9LCAiZmllbGQiOiAiV2lqayIsICJ0aXRsZSI6IG51bGwsICJ0eXBlIjogIm5vbWluYWwifSwgInkiOiB7ImF4aXMiOiB7ImdyaWQiOiBmYWxzZSwgImxhYmVscyI6IHRydWUsICJ0aWNrcyI6IGZhbHNlfSwgImZpZWxkIjogInZhbHVlIiwgInNjYWxlIjogeyJkb21haW4iOiBbMCwgNl19LCAidGl0bGUiOiAiQWFudGFsIiwgInR5cGUiOiAicXVhbnRpdGF0aXZlIn19LCAiaGVpZ2h0IjogMjAwLCAidGl0bGUiOiB7InRleHQiOiAiQmFhaWR1aW5lbiIsICJhbmNob3IiOiAic3RhcnQiLCAiZm9udFNpemUiOiAyOCwgInN1YnRpdGxlIjogIiAifSwgIndpZHRoIjogMTgwLCAiJHNjaGVtYSI6ICJodHRwczovL3ZlZ2EuZ2l0aHViLmlvL3NjaGVtYS92ZWdhLWxpdGUvdjUuOC4wLmpzb24iLCAiZGF0YXNldHMiOiB7ImRhdGEtODY4YjE5NDVjNTQ4MjgxZTBmOTIwMjllYzljOTUzZTUiOiBbeyJXaWprIjogIkJhYWlkdWluZW4iLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQiLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiT29zdGVyZW5kIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIldlc3QgVGVyc2NoZWxsaW5nIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIkxhbmRlcnVtIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIkZvcm1lcnVtIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIGFhbiBaZWUiLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiV2VzdCBhYSBaZWUiLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTGllcyIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJIb29ybiIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJCYWFpZHVpbmVuIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQiLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJPb3N0ZXJlbmQiLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJXZXN0IFRlcnNjaGVsbGluZyIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiA1fSwgeyJXaWprIjogIkxhbmRlcnVtIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiRm9ybWVydW0iLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJNaWRzbGFuZCBhYW4gWmVlIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiV2VzdCBhYSBaZWUiLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMn0sIHsiV2lqayI6ICJMaWVzIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiSG9vcm4iLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMn0sIHsiV2lqayI6ICJCYWFpZHVpbmVuIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJNaWRzbGFuZCIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiT29zdGVyZW5kIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJXZXN0IFRlcnNjaGVsbGluZyIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTGFuZGVydW0iLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIkZvcm1lcnVtIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJNaWRzbGFuZCBhYW4gWmVlIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJXZXN0IGFhIFplZSIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDJ9LCB7IldpamsiOiAiTGllcyIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiSG9vcm4iLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIkJhYWlkdWluZW4iLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJPb3N0ZXJlbmQiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIldlc3QgVGVyc2NoZWxsaW5nIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJMYW5kZXJ1bSIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiRm9ybWVydW0iLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIGFhbiBaZWUiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIldlc3QgYWEgWmVlIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJMaWVzIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJIb29ybiIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDJ9XX19OwogICAgICB2YXIgZW1iZWRPcHQgPSB7Im1vZGUiOiAidmVnYS1saXRlIn07CgogICAgICBmdW5jdGlvbiBzaG93RXJyb3IoZWwsIGVycm9yKXsKICAgICAgICAgIGVsLmlubmVySFRNTCA9ICgnPGRpdiBzdHlsZT0iY29sb3I6cmVkOyI+JwogICAgICAgICAgICAgICAgICAgICAgICAgICsgJzxwPkphdmFTY3JpcHQgRXJyb3I6ICcgKyBlcnJvci5tZXNzYWdlICsgJzwvcD4nCiAgICAgICAgICAgICAgICAgICAgICAgICAgKyAiPHA+VGhpcyB1c3VhbGx5IG1lYW5zIHRoZXJlJ3MgYSB0eXBvIGluIHlvdXIgY2hhcnQgc3BlY2lmaWNhdGlvbi4gIgogICAgICAgICAgICAgICAgICAgICAgICAgICsgIlNlZSB0aGUgamF2YXNjcmlwdCBjb25zb2xlIGZvciB0aGUgZnVsbCB0cmFjZWJhY2suPC9wPiIKICAgICAgICAgICAgICAgICAgICAgICAgICArICc8L2Rpdj4nKTsKICAgICAgICAgIHRocm93IGVycm9yOwogICAgICB9CiAgICAgIGNvbnN0IGVsID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3ZpcycpOwogICAgICB2ZWdhRW1iZWQoIiN2aXMiLCBzcGVjLCBlbWJlZE9wdCkKICAgICAgICAuY2F0Y2goZXJyb3IgPT4gc2hvd0Vycm9yKGVsLCBlcnJvcikpOwogICAgfSkodmVnYUVtYmVkKTsKCiAgPC9zY3JpcHQ+CjwvYm9keT4KPC9odG1sPg==" width="840" style="border:none !important;" height="400"></iframe>`)[0];
+                popup_ae275490d9ba8c6476e460705c2cef71.setContent(i_frame_543cc0bf73395adccd4ea42c253833ef);
+            
+        
+
+        geo_json_bdfd2e74d31a91b0854555a4d8874b82.bindPopup(popup_ae275490d9ba8c6476e460705c2cef71)
+        ;
+
+        
+    
+    
+            geo_json_bdfd2e74d31a91b0854555a4d8874b82.addTo(feature_group_ddd72be1019de98820d62b263c11b898);
+        
+    
+        function geo_json_d6fbf60e5b1f865ec086c8eb91669623_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "red", "fillOpacity": 0.5, "weight": 0.4};
+            }
+        }
+
+        function geo_json_d6fbf60e5b1f865ec086c8eb91669623_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d6fbf60e5b1f865ec086c8eb91669623 = L.geoJson(null, {
+                onEachFeature: geo_json_d6fbf60e5b1f865ec086c8eb91669623_onEachFeature,
+            
+                style: geo_json_d6fbf60e5b1f865ec086c8eb91669623_styler,
+        });
+
+        function geo_json_d6fbf60e5b1f865ec086c8eb91669623_add (data) {
+            geo_json_d6fbf60e5b1f865ec086c8eb91669623
+                .addData(data);
+        }
+            geo_json_d6fbf60e5b1f865ec086c8eb91669623_add({"bbox": [5.280876251425838, 53.379322288989215, 5.293144398460981, 53.385275205577926], "features": [{"bbox": [5.280876251425838, 53.379322288989215, 5.293144398460981, 53.385275205577926], "geometry": {"coordinates": [[[5.282493595545503, 53.379322288989215], [5.28470265039536, 53.37986349781818], [5.289357445666354, 53.38125178413782], [5.291448159506871, 53.38191061587784], [5.292789371703265, 53.38341647910252], [5.293144398460981, 53.38454584157148], [5.292237107857602, 53.384922289070175], [5.290304184397513, 53.38515756706707], [5.28817402385036, 53.385275205577926], [5.286004415885117, 53.385275205577926], [5.283874255337963, 53.38518109479503], [5.282769727645814, 53.384922289070175], [5.281586305120129, 53.38463995375807], [5.281112936108968, 53.38388705043877], [5.280876251603786, 53.38353412242418], [5.281270725740683, 53.38285178663244], [5.280876251425838, 53.382051792780175], [5.281665199776597, 53.381534141712734], [5.28284862230322, 53.38136943323545], [5.282375253292912, 53.38059294183091], [5.282493595545503, 53.379322288989215]]], "type": "Polygon"}, "id": "1", "properties": {"Wijk": "Midsland", "kraamverblijf": 0, "paarverblijf": 1, "winterverblijf": 0, "zommerverblijf": 0}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_d6fbf60e5b1f865ec086c8eb91669623.bindTooltip(
+                `<div style="background-color: white; color: black; font-family:courier new; font-size: 14px; padding: 10px;">
+                     Klik op de veelhoek om de grafiek te zien
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        var popup_7c432b4b8e096a969d6603ce151582fc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var i_frame_ea4a24f9bf5762606fd54baa91fd8892 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8IURPQ1RZUEUgaHRtbD4KPGh0bWw+CjxoZWFkPgogIDxzdHlsZT4KICAgICN2aXMudmVnYS1lbWJlZCB7CiAgICAgIHdpZHRoOiAxMDAlOwogICAgICBkaXNwbGF5OiBmbGV4OwogICAgfQoKICAgICN2aXMudmVnYS1lbWJlZCBkZXRhaWxzLAogICAgI3Zpcy52ZWdhLWVtYmVkIGRldGFpbHMgc3VtbWFyeSB7CiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTsKICAgIH0KICA8L3N0eWxlPgogIDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9ucG0vdmVnYUA1Ij48L3NjcmlwdD4KICA8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL3ZlZ2EtbGl0ZUA1LjguMCI+PC9zY3JpcHQ+CiAgPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS92ZWdhLWVtYmVkQDYiPjwvc2NyaXB0Pgo8L2hlYWQ+Cjxib2R5PgogIDxkaXYgaWQ9InZpcyI+PC9kaXY+CiAgPHNjcmlwdD4KICAgIChmdW5jdGlvbih2ZWdhRW1iZWQpIHsKICAgICAgdmFyIHNwZWMgPSB7ImNvbmZpZyI6IHsidmlldyI6IHsiY29udGludW91c1dpZHRoIjogMzAwLCAiY29udGludW91c0hlaWdodCI6IDMwMCwgInN0cm9rZSI6IG51bGx9fSwgImRhdGEiOiB7Im5hbWUiOiAiZGF0YS04NjhiMTk0NWM1NDgyODFlMGY5MjAyOWVjOWM5NTNlNSJ9LCAibWFyayI6IHsidHlwZSI6ICJiYXIiLCAiY29ybmVyUmFkaXVzVG9wTGVmdCI6IDgsICJjb3JuZXJSYWRpdXNUb3BSaWdodCI6IDh9LCAiZW5jb2RpbmciOiB7ImNvbG9yIjogeyJjb25kaXRpb24iOiB7InRlc3QiOiAiKGRhdHVtLldpamsgPT09ICdNaWRzbGFuZCcpIiwgInZhbHVlIjogIlJlZCJ9LCAidmFsdWUiOiAibGlnaHRncmV5In0sICJjb2x1bW4iOiB7ImZpZWxkIjogInZhcmlhYmxlIiwgImhlYWRlciI6IHsibGFiZWxGb250V2VpZ2h0IjogNjAwfSwgInNwYWNpbmciOiAxMiwgInRpdGxlIjogbnVsbCwgInR5cGUiOiAibm9taW5hbCJ9LCAidG9vbHRpcCI6IFt7ImZpZWxkIjogIldpamsiLCAidGl0bGUiOiAiR2ViaWVkIiwgInR5cGUiOiAibm9taW5hbCJ9LCB7ImZpZWxkIjogInZhbHVlIiwgInRpdGxlIjogIkFhbnRhbCIsICJ0eXBlIjogInF1YW50aXRhdGl2ZSJ9XSwgIngiOiB7ImF4aXMiOiB7ImdyaWQiOiBmYWxzZSwgImxhYmVscyI6IHRydWUsICJ0aWNrcyI6IGZhbHNlfSwgImZpZWxkIjogIldpamsiLCAidGl0bGUiOiBudWxsLCAidHlwZSI6ICJub21pbmFsIn0sICJ5IjogeyJheGlzIjogeyJncmlkIjogZmFsc2UsICJsYWJlbHMiOiB0cnVlLCAidGlja3MiOiBmYWxzZX0sICJmaWVsZCI6ICJ2YWx1ZSIsICJzY2FsZSI6IHsiZG9tYWluIjogWzAsIDZdfSwgInRpdGxlIjogIkFhbnRhbCIsICJ0eXBlIjogInF1YW50aXRhdGl2ZSJ9fSwgImhlaWdodCI6IDIwMCwgInRpdGxlIjogeyJ0ZXh0IjogIk1pZHNsYW5kIiwgImFuY2hvciI6ICJzdGFydCIsICJmb250U2l6ZSI6IDI4LCAic3VidGl0bGUiOiAiICJ9LCAid2lkdGgiOiAxODAsICIkc2NoZW1hIjogImh0dHBzOi8vdmVnYS5naXRodWIuaW8vc2NoZW1hL3ZlZ2EtbGl0ZS92NS44LjAuanNvbiIsICJkYXRhc2V0cyI6IHsiZGF0YS04NjhiMTk0NWM1NDgyODFlMGY5MjAyOWVjOWM5NTNlNSI6IFt7IldpamsiOiAiQmFhaWR1aW5lbiIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJNaWRzbGFuZCIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJPb3N0ZXJlbmQiLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiV2VzdCBUZXJzY2hlbGxpbmciLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTGFuZGVydW0iLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiRm9ybWVydW0iLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQgYWFuIFplZSIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJXZXN0IGFhIFplZSIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJMaWVzIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkhvb3JuIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkJhYWlkdWluZW4iLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJNaWRzbGFuZCIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIk9vc3RlcmVuZCIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIldlc3QgVGVyc2NoZWxsaW5nIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDV9LCB7IldpamsiOiAiTGFuZGVydW0iLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJGb3JtZXJ1bSIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIk1pZHNsYW5kIGFhbiBaZWUiLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJXZXN0IGFhIFplZSIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAyfSwgeyJXaWprIjogIkxpZXMiLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJIb29ybiIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAyfSwgeyJXaWprIjogIkJhYWlkdWluZW4iLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJPb3N0ZXJlbmQiLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIldlc3QgVGVyc2NoZWxsaW5nIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJMYW5kZXJ1bSIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiRm9ybWVydW0iLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIGFhbiBaZWUiLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIldlc3QgYWEgWmVlIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMn0sIHsiV2lqayI6ICJMaWVzIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJIb29ybiIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiQmFhaWR1aW5lbiIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk9vc3RlcmVuZCIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiV2VzdCBUZXJzY2hlbGxpbmciLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIkxhbmRlcnVtIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJGb3JtZXJ1bSIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQgYWFuIFplZSIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiV2VzdCBhYSBaZWUiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkxpZXMiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkhvb3JuIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMn1dfX07CiAgICAgIHZhciBlbWJlZE9wdCA9IHsibW9kZSI6ICJ2ZWdhLWxpdGUifTsKCiAgICAgIGZ1bmN0aW9uIHNob3dFcnJvcihlbCwgZXJyb3IpewogICAgICAgICAgZWwuaW5uZXJIVE1MID0gKCc8ZGl2IHN0eWxlPSJjb2xvcjpyZWQ7Ij4nCiAgICAgICAgICAgICAgICAgICAgICAgICAgKyAnPHA+SmF2YVNjcmlwdCBFcnJvcjogJyArIGVycm9yLm1lc3NhZ2UgKyAnPC9wPicKICAgICAgICAgICAgICAgICAgICAgICAgICArICI8cD5UaGlzIHVzdWFsbHkgbWVhbnMgdGhlcmUncyBhIHR5cG8gaW4geW91ciBjaGFydCBzcGVjaWZpY2F0aW9uLiAiCiAgICAgICAgICAgICAgICAgICAgICAgICAgKyAiU2VlIHRoZSBqYXZhc2NyaXB0IGNvbnNvbGUgZm9yIHRoZSBmdWxsIHRyYWNlYmFjay48L3A+IgogICAgICAgICAgICAgICAgICAgICAgICAgICsgJzwvZGl2PicpOwogICAgICAgICAgdGhyb3cgZXJyb3I7CiAgICAgIH0KICAgICAgY29uc3QgZWwgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgndmlzJyk7CiAgICAgIHZlZ2FFbWJlZCgiI3ZpcyIsIHNwZWMsIGVtYmVkT3B0KQogICAgICAgIC5jYXRjaChlcnJvciA9PiBzaG93RXJyb3IoZWwsIGVycm9yKSk7CiAgICB9KSh2ZWdhRW1iZWQpOwoKICA8L3NjcmlwdD4KPC9ib2R5Pgo8L2h0bWw+" width="840" style="border:none !important;" height="400"></iframe>`)[0];
+                popup_7c432b4b8e096a969d6603ce151582fc.setContent(i_frame_ea4a24f9bf5762606fd54baa91fd8892);
+            
+        
+
+        geo_json_d6fbf60e5b1f865ec086c8eb91669623.bindPopup(popup_7c432b4b8e096a969d6603ce151582fc)
+        ;
+
+        
+    
+    
+            geo_json_d6fbf60e5b1f865ec086c8eb91669623.addTo(feature_group_ddd72be1019de98820d62b263c11b898);
+        
+    
+        function geo_json_8c06ebdeefc38964c935f337d640139e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "red", "fillOpacity": 0.5, "weight": 0.4};
+            }
+        }
+
+        function geo_json_8c06ebdeefc38964c935f337d640139e_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8c06ebdeefc38964c935f337d640139e = L.geoJson(null, {
+                onEachFeature: geo_json_8c06ebdeefc38964c935f337d640139e_onEachFeature,
+            
+                style: geo_json_8c06ebdeefc38964c935f337d640139e_styler,
+        });
+
+        function geo_json_8c06ebdeefc38964c935f337d640139e_add (data) {
+            geo_json_8c06ebdeefc38964c935f337d640139e
+                .addData(data);
+        }
+            geo_json_8c06ebdeefc38964c935f337d640139e_add({"bbox": [5.363056948527927, 53.40082043664975, 5.385309011206772, 53.40609426818355], "features": [{"bbox": [5.363056948527927, 53.40082043664975, 5.385309011206772, 53.40609426818355], "geometry": {"coordinates": [[[5.384004874135684, 53.40400482646362], [5.384819959804588, 53.404709417115726], [5.385309011206772, 53.405341109159195], [5.384493925537782, 53.40597279182384], [5.382170931380216, 53.40609426818355], [5.377117400232038, 53.40609426818355], [5.374142337538956, 53.40558406514026], [5.370229926327454, 53.404709417115726], [5.369863137776605, 53.40422349377678], [5.367825423603705, 53.40364037844367], [5.363056948527927, 53.402397534249516], [5.363904655711885, 53.401521314315], [5.3654102759263544, 53.40082043664975], [5.367369971019684, 53.401441329409636], [5.366589873149756, 53.40234339978706], [5.367294945979129, 53.40261926623146], [5.3676794953650955, 53.4030225274432], [5.369169771887108, 53.40303283008417], [5.370286104389777, 53.40291573976356], [5.372430659710915, 53.403300224830616], [5.374223848183192, 53.40293577077557], [5.375772510954874, 53.40293577077557], [5.37687287660853, 53.403300224830616], [5.378217767961843, 53.40320303738804], [5.380010956434148, 53.403494599050305], [5.380826042107458, 53.403834751787485], [5.381616160517211, 53.40368748382559], [5.382920297588299, 53.403906152769736], [5.384004874135684, 53.40400482646362]]], "type": "Polygon"}, "id": "2", "properties": {"Wijk": "Oosterend", "kraamverblijf": 0, "paarverblijf": 1, "winterverblijf": 0, "zommerverblijf": 1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_8c06ebdeefc38964c935f337d640139e.bindTooltip(
+                `<div style="background-color: white; color: black; font-family:courier new; font-size: 14px; padding: 10px;">
+                     Klik op de veelhoek om de grafiek te zien
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        var popup_cb9c4953f0f02f09c5e9b5a79311eb6d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var i_frame_5a0fe50961b7bf47d1ed5dd8b4faaaf5 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8IURPQ1RZUEUgaHRtbD4KPGh0bWw+CjxoZWFkPgogIDxzdHlsZT4KICAgICN2aXMudmVnYS1lbWJlZCB7CiAgICAgIHdpZHRoOiAxMDAlOwogICAgICBkaXNwbGF5OiBmbGV4OwogICAgfQoKICAgICN2aXMudmVnYS1lbWJlZCBkZXRhaWxzLAogICAgI3Zpcy52ZWdhLWVtYmVkIGRldGFpbHMgc3VtbWFyeSB7CiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTsKICAgIH0KICA8L3N0eWxlPgogIDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9ucG0vdmVnYUA1Ij48L3NjcmlwdD4KICA8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL3ZlZ2EtbGl0ZUA1LjguMCI+PC9zY3JpcHQ+CiAgPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS92ZWdhLWVtYmVkQDYiPjwvc2NyaXB0Pgo8L2hlYWQ+Cjxib2R5PgogIDxkaXYgaWQ9InZpcyI+PC9kaXY+CiAgPHNjcmlwdD4KICAgIChmdW5jdGlvbih2ZWdhRW1iZWQpIHsKICAgICAgdmFyIHNwZWMgPSB7ImNvbmZpZyI6IHsidmlldyI6IHsiY29udGludW91c1dpZHRoIjogMzAwLCAiY29udGludW91c0hlaWdodCI6IDMwMCwgInN0cm9rZSI6IG51bGx9fSwgImRhdGEiOiB7Im5hbWUiOiAiZGF0YS04NjhiMTk0NWM1NDgyODFlMGY5MjAyOWVjOWM5NTNlNSJ9LCAibWFyayI6IHsidHlwZSI6ICJiYXIiLCAiY29ybmVyUmFkaXVzVG9wTGVmdCI6IDgsICJjb3JuZXJSYWRpdXNUb3BSaWdodCI6IDh9LCAiZW5jb2RpbmciOiB7ImNvbG9yIjogeyJjb25kaXRpb24iOiB7InRlc3QiOiAiKGRhdHVtLldpamsgPT09ICdPb3N0ZXJlbmQnKSIsICJ2YWx1ZSI6ICJSZWQifSwgInZhbHVlIjogImxpZ2h0Z3JleSJ9LCAiY29sdW1uIjogeyJmaWVsZCI6ICJ2YXJpYWJsZSIsICJoZWFkZXIiOiB7ImxhYmVsRm9udFdlaWdodCI6IDYwMH0sICJzcGFjaW5nIjogMTIsICJ0aXRsZSI6IG51bGwsICJ0eXBlIjogIm5vbWluYWwifSwgInRvb2x0aXAiOiBbeyJmaWVsZCI6ICJXaWprIiwgInRpdGxlIjogIkdlYmllZCIsICJ0eXBlIjogIm5vbWluYWwifSwgeyJmaWVsZCI6ICJ2YWx1ZSIsICJ0aXRsZSI6ICJBYW50YWwiLCAidHlwZSI6ICJxdWFudGl0YXRpdmUifV0sICJ4IjogeyJheGlzIjogeyJncmlkIjogZmFsc2UsICJsYWJlbHMiOiB0cnVlLCAidGlja3MiOiBmYWxzZX0sICJmaWVsZCI6ICJXaWprIiwgInRpdGxlIjogbnVsbCwgInR5cGUiOiAibm9taW5hbCJ9LCAieSI6IHsiYXhpcyI6IHsiZ3JpZCI6IGZhbHNlLCAibGFiZWxzIjogdHJ1ZSwgInRpY2tzIjogZmFsc2V9LCAiZmllbGQiOiAidmFsdWUiLCAic2NhbGUiOiB7ImRvbWFpbiI6IFswLCA2XX0sICJ0aXRsZSI6ICJBYW50YWwiLCAidHlwZSI6ICJxdWFudGl0YXRpdmUifX0sICJoZWlnaHQiOiAyMDAsICJ0aXRsZSI6IHsidGV4dCI6ICJPb3N0ZXJlbmQiLCAiYW5jaG9yIjogInN0YXJ0IiwgImZvbnRTaXplIjogMjgsICJzdWJ0aXRsZSI6ICIgIn0sICJ3aWR0aCI6IDE4MCwgIiRzY2hlbWEiOiAiaHR0cHM6Ly92ZWdhLmdpdGh1Yi5pby9zY2hlbWEvdmVnYS1saXRlL3Y1LjguMC5qc29uIiwgImRhdGFzZXRzIjogeyJkYXRhLTg2OGIxOTQ1YzU0ODI4MWUwZjkyMDI5ZWM5Yzk1M2U1IjogW3siV2lqayI6ICJCYWFpZHVpbmVuIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk9vc3RlcmVuZCIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJXZXN0IFRlcnNjaGVsbGluZyIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJMYW5kZXJ1bSIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJGb3JtZXJ1bSIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJNaWRzbGFuZCBhYW4gWmVlIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIldlc3QgYWEgWmVlIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIkxpZXMiLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiSG9vcm4iLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiQmFhaWR1aW5lbiIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiT29zdGVyZW5kIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiV2VzdCBUZXJzY2hlbGxpbmciLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogNX0sIHsiV2lqayI6ICJMYW5kZXJ1bSIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIkZvcm1lcnVtIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiTWlkc2xhbmQgYWFuIFplZSIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIldlc3QgYWEgWmVlIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDJ9LCB7IldpamsiOiAiTGllcyIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkhvb3JuIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDJ9LCB7IldpamsiOiAiQmFhaWR1aW5lbiIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQiLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk9vc3RlcmVuZCIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiV2VzdCBUZXJzY2hlbGxpbmciLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIkxhbmRlcnVtIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJGb3JtZXJ1bSIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQgYWFuIFplZSIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiV2VzdCBhYSBaZWUiLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAyfSwgeyJXaWprIjogIkxpZXMiLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIkhvb3JuIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJCYWFpZHVpbmVuIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJNaWRzbGFuZCIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiT29zdGVyZW5kIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJXZXN0IFRlcnNjaGVsbGluZyIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTGFuZGVydW0iLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkZvcm1lcnVtIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJNaWRzbGFuZCBhYW4gWmVlIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJXZXN0IGFhIFplZSIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiTGllcyIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiSG9vcm4iLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAyfV19fTsKICAgICAgdmFyIGVtYmVkT3B0ID0geyJtb2RlIjogInZlZ2EtbGl0ZSJ9OwoKICAgICAgZnVuY3Rpb24gc2hvd0Vycm9yKGVsLCBlcnJvcil7CiAgICAgICAgICBlbC5pbm5lckhUTUwgPSAoJzxkaXYgc3R5bGU9ImNvbG9yOnJlZDsiPicKICAgICAgICAgICAgICAgICAgICAgICAgICArICc8cD5KYXZhU2NyaXB0IEVycm9yOiAnICsgZXJyb3IubWVzc2FnZSArICc8L3A+JwogICAgICAgICAgICAgICAgICAgICAgICAgICsgIjxwPlRoaXMgdXN1YWxseSBtZWFucyB0aGVyZSdzIGEgdHlwbyBpbiB5b3VyIGNoYXJ0IHNwZWNpZmljYXRpb24uICIKICAgICAgICAgICAgICAgICAgICAgICAgICArICJTZWUgdGhlIGphdmFzY3JpcHQgY29uc29sZSBmb3IgdGhlIGZ1bGwgdHJhY2ViYWNrLjwvcD4iCiAgICAgICAgICAgICAgICAgICAgICAgICAgKyAnPC9kaXY+Jyk7CiAgICAgICAgICB0aHJvdyBlcnJvcjsKICAgICAgfQogICAgICBjb25zdCBlbCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCd2aXMnKTsKICAgICAgdmVnYUVtYmVkKCIjdmlzIiwgc3BlYywgZW1iZWRPcHQpCiAgICAgICAgLmNhdGNoKGVycm9yID0+IHNob3dFcnJvcihlbCwgZXJyb3IpKTsKICAgIH0pKHZlZ2FFbWJlZCk7CgogIDwvc2NyaXB0Pgo8L2JvZHk+CjwvaHRtbD4=" width="840" style="border:none !important;" height="400"></iframe>`)[0];
+                popup_cb9c4953f0f02f09c5e9b5a79311eb6d.setContent(i_frame_5a0fe50961b7bf47d1ed5dd8b4faaaf5);
+            
+        
+
+        geo_json_8c06ebdeefc38964c935f337d640139e.bindPopup(popup_cb9c4953f0f02f09c5e9b5a79311eb6d)
+        ;
+
+        
+    
+    
+            geo_json_8c06ebdeefc38964c935f337d640139e.addTo(feature_group_ddd72be1019de98820d62b263c11b898);
+        
+    
+        function geo_json_db43a7e7e40fe7d3c5a025669702ecc1_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "red", "fillOpacity": 0.5, "weight": 0.4};
+            }
+        }
+
+        function geo_json_db43a7e7e40fe7d3c5a025669702ecc1_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_db43a7e7e40fe7d3c5a025669702ecc1 = L.geoJson(null, {
+                onEachFeature: geo_json_db43a7e7e40fe7d3c5a025669702ecc1_onEachFeature,
+            
+                style: geo_json_db43a7e7e40fe7d3c5a025669702ecc1_styler,
+        });
+
+        function geo_json_db43a7e7e40fe7d3c5a025669702ecc1_add (data) {
+            geo_json_db43a7e7e40fe7d3c5a025669702ecc1
+                .addData(data);
+        }
+            geo_json_db43a7e7e40fe7d3c5a025669702ecc1_add({"bbox": [5.210288563983909, 53.3563215780884, 5.225361705227073, 53.36949030268326], "features": [{"bbox": [5.210288563983909, 53.3563215780884, 5.225361705227073, 53.36949030268326], "geometry": {"coordinates": [[[5.21200495699739, 53.35702789326078], [5.211559566885484, 53.356587826905724], [5.212294324997146, 53.3563215780884], [5.213527667043309, 53.356509519073995], [5.2154695247325265, 53.35741788881987], [5.2161780404591696, 53.358106984063994], [5.216395760517514, 53.35884769876429], [5.216973069560396, 53.359724697619924], [5.217392929600578, 53.36079426575918], [5.217760308081779, 53.361639904908714], [5.2184950650453175, 53.362830035281775], [5.218914926167571, 53.363581679443456], [5.219518476530965, 53.36394183757179], [5.221197925910758, 53.36514756257114], [5.222300061356719, 53.365460732215126], [5.224451849606453, 53.365836532749626], [5.225029158649363, 53.36636891116564], [5.224924193369674, 53.36699523019672], [5.225361705227073, 53.36790892174818], [5.224443260363159, 53.36875441997549], [5.223472331518508, 53.36855087570589], [5.222580126633062, 53.36737656285092], [5.222370196072546, 53.368002867068384], [5.222999987755287, 53.36795589457148], [5.22284253983463, 53.36844127454219], [5.222790057194771, 53.36942767486278], [5.222160265512059, 53.369458988784345], [5.221477991188266, 53.3692397908481], [5.221136854026412, 53.36930241894518], [5.220323373102474, 53.369412017892984], [5.219641098778709, 53.36949030268326], [5.218958824456166, 53.36939636091782], [5.2176992410895195, 53.36892664898269], [5.217279379967323, 53.368738762758625], [5.21659710564353, 53.368848363156616], [5.215757383400273, 53.36883270597423], [5.214076411628724, 53.36844221883504], [5.213262930704815, 53.36805078381505], [5.211950864698309, 53.367314876240414], [5.211531003577306, 53.36725224522135], [5.211373555655456, 53.36690777297173], [5.211058659814057, 53.36681382551123], [5.211058659814057, 53.366422375528884], [5.210665040012344, 53.366203161967775], [5.211216812370793, 53.36584302295606], [5.212477351445955, 53.36573557026139], [5.21292969301561, 53.36526683078412], [5.21316979615716, 53.36480119407594], [5.211909257080606, 53.36480119407594], [5.2111289233678235, 53.36480119407594], [5.210468640994662, 53.36447882729621], [5.210288563983909, 53.3642280958922], [5.212965367722205, 53.36315351604], [5.213505598754438, 53.36261621594085], [5.213505598754438, 53.361899805269445], [5.213505598754438, 53.36154159541684], [5.212665239370523, 53.360753523141], [5.211944931327537, 53.35960721017665], [5.211944931327537, 53.358281747371365], [5.21200495699739, 53.35702789326078]]], "type": "Polygon"}, "id": "3", "properties": {"Wijk": "West Terschelling", "kraamverblijf": 0, "paarverblijf": 5, "winterverblijf": 0, "zommerverblijf": 0}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_db43a7e7e40fe7d3c5a025669702ecc1.bindTooltip(
+                `<div style="background-color: white; color: black; font-family:courier new; font-size: 14px; padding: 10px;">
+                     Klik op de veelhoek om de grafiek te zien
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        var popup_91054ebffa98501684f3a1b6ca2e0ed8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var i_frame_09d14b4de40c1748771bf99b6ae588bd = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8IURPQ1RZUEUgaHRtbD4KPGh0bWw+CjxoZWFkPgogIDxzdHlsZT4KICAgICN2aXMudmVnYS1lbWJlZCB7CiAgICAgIHdpZHRoOiAxMDAlOwogICAgICBkaXNwbGF5OiBmbGV4OwogICAgfQoKICAgICN2aXMudmVnYS1lbWJlZCBkZXRhaWxzLAogICAgI3Zpcy52ZWdhLWVtYmVkIGRldGFpbHMgc3VtbWFyeSB7CiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTsKICAgIH0KICA8L3N0eWxlPgogIDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9ucG0vdmVnYUA1Ij48L3NjcmlwdD4KICA8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL3ZlZ2EtbGl0ZUA1LjguMCI+PC9zY3JpcHQ+CiAgPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS92ZWdhLWVtYmVkQDYiPjwvc2NyaXB0Pgo8L2hlYWQ+Cjxib2R5PgogIDxkaXYgaWQ9InZpcyI+PC9kaXY+CiAgPHNjcmlwdD4KICAgIChmdW5jdGlvbih2ZWdhRW1iZWQpIHsKICAgICAgdmFyIHNwZWMgPSB7ImNvbmZpZyI6IHsidmlldyI6IHsiY29udGludW91c1dpZHRoIjogMzAwLCAiY29udGludW91c0hlaWdodCI6IDMwMCwgInN0cm9rZSI6IG51bGx9fSwgImRhdGEiOiB7Im5hbWUiOiAiZGF0YS04NjhiMTk0NWM1NDgyODFlMGY5MjAyOWVjOWM5NTNlNSJ9LCAibWFyayI6IHsidHlwZSI6ICJiYXIiLCAiY29ybmVyUmFkaXVzVG9wTGVmdCI6IDgsICJjb3JuZXJSYWRpdXNUb3BSaWdodCI6IDh9LCAiZW5jb2RpbmciOiB7ImNvbG9yIjogeyJjb25kaXRpb24iOiB7InRlc3QiOiAiKGRhdHVtLldpamsgPT09ICdXZXN0IFRlcnNjaGVsbGluZycpIiwgInZhbHVlIjogIlJlZCJ9LCAidmFsdWUiOiAibGlnaHRncmV5In0sICJjb2x1bW4iOiB7ImZpZWxkIjogInZhcmlhYmxlIiwgImhlYWRlciI6IHsibGFiZWxGb250V2VpZ2h0IjogNjAwfSwgInNwYWNpbmciOiAxMiwgInRpdGxlIjogbnVsbCwgInR5cGUiOiAibm9taW5hbCJ9LCAidG9vbHRpcCI6IFt7ImZpZWxkIjogIldpamsiLCAidGl0bGUiOiAiR2ViaWVkIiwgInR5cGUiOiAibm9taW5hbCJ9LCB7ImZpZWxkIjogInZhbHVlIiwgInRpdGxlIjogIkFhbnRhbCIsICJ0eXBlIjogInF1YW50aXRhdGl2ZSJ9XSwgIngiOiB7ImF4aXMiOiB7ImdyaWQiOiBmYWxzZSwgImxhYmVscyI6IHRydWUsICJ0aWNrcyI6IGZhbHNlfSwgImZpZWxkIjogIldpamsiLCAidGl0bGUiOiBudWxsLCAidHlwZSI6ICJub21pbmFsIn0sICJ5IjogeyJheGlzIjogeyJncmlkIjogZmFsc2UsICJsYWJlbHMiOiB0cnVlLCAidGlja3MiOiBmYWxzZX0sICJmaWVsZCI6ICJ2YWx1ZSIsICJzY2FsZSI6IHsiZG9tYWluIjogWzAsIDZdfSwgInRpdGxlIjogIkFhbnRhbCIsICJ0eXBlIjogInF1YW50aXRhdGl2ZSJ9fSwgImhlaWdodCI6IDIwMCwgInRpdGxlIjogeyJ0ZXh0IjogIldlc3QgVGVyc2NoZWxsaW5nIiwgImFuY2hvciI6ICJzdGFydCIsICJmb250U2l6ZSI6IDI4LCAic3VidGl0bGUiOiAiICJ9LCAid2lkdGgiOiAxODAsICIkc2NoZW1hIjogImh0dHBzOi8vdmVnYS5naXRodWIuaW8vc2NoZW1hL3ZlZ2EtbGl0ZS92NS44LjAuanNvbiIsICJkYXRhc2V0cyI6IHsiZGF0YS04NjhiMTk0NWM1NDgyODFlMGY5MjAyOWVjOWM5NTNlNSI6IFt7IldpamsiOiAiQmFhaWR1aW5lbiIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJNaWRzbGFuZCIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJPb3N0ZXJlbmQiLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiV2VzdCBUZXJzY2hlbGxpbmciLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTGFuZGVydW0iLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiRm9ybWVydW0iLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQgYWFuIFplZSIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJXZXN0IGFhIFplZSIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJMaWVzIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkhvb3JuIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkJhYWlkdWluZW4iLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJNaWRzbGFuZCIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIk9vc3RlcmVuZCIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIldlc3QgVGVyc2NoZWxsaW5nIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDV9LCB7IldpamsiOiAiTGFuZGVydW0iLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJGb3JtZXJ1bSIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIk1pZHNsYW5kIGFhbiBaZWUiLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJXZXN0IGFhIFplZSIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAyfSwgeyJXaWprIjogIkxpZXMiLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJIb29ybiIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAyfSwgeyJXaWprIjogIkJhYWlkdWluZW4iLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJPb3N0ZXJlbmQiLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIldlc3QgVGVyc2NoZWxsaW5nIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJMYW5kZXJ1bSIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiRm9ybWVydW0iLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIGFhbiBaZWUiLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIldlc3QgYWEgWmVlIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMn0sIHsiV2lqayI6ICJMaWVzIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJIb29ybiIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiQmFhaWR1aW5lbiIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk9vc3RlcmVuZCIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiV2VzdCBUZXJzY2hlbGxpbmciLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIkxhbmRlcnVtIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJGb3JtZXJ1bSIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQgYWFuIFplZSIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiV2VzdCBhYSBaZWUiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkxpZXMiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkhvb3JuIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMn1dfX07CiAgICAgIHZhciBlbWJlZE9wdCA9IHsibW9kZSI6ICJ2ZWdhLWxpdGUifTsKCiAgICAgIGZ1bmN0aW9uIHNob3dFcnJvcihlbCwgZXJyb3IpewogICAgICAgICAgZWwuaW5uZXJIVE1MID0gKCc8ZGl2IHN0eWxlPSJjb2xvcjpyZWQ7Ij4nCiAgICAgICAgICAgICAgICAgICAgICAgICAgKyAnPHA+SmF2YVNjcmlwdCBFcnJvcjogJyArIGVycm9yLm1lc3NhZ2UgKyAnPC9wPicKICAgICAgICAgICAgICAgICAgICAgICAgICArICI8cD5UaGlzIHVzdWFsbHkgbWVhbnMgdGhlcmUncyBhIHR5cG8gaW4geW91ciBjaGFydCBzcGVjaWZpY2F0aW9uLiAiCiAgICAgICAgICAgICAgICAgICAgICAgICAgKyAiU2VlIHRoZSBqYXZhc2NyaXB0IGNvbnNvbGUgZm9yIHRoZSBmdWxsIHRyYWNlYmFjay48L3A+IgogICAgICAgICAgICAgICAgICAgICAgICAgICsgJzwvZGl2PicpOwogICAgICAgICAgdGhyb3cgZXJyb3I7CiAgICAgIH0KICAgICAgY29uc3QgZWwgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgndmlzJyk7CiAgICAgIHZlZ2FFbWJlZCgiI3ZpcyIsIHNwZWMsIGVtYmVkT3B0KQogICAgICAgIC5jYXRjaChlcnJvciA9PiBzaG93RXJyb3IoZWwsIGVycm9yKSk7CiAgICB9KSh2ZWdhRW1iZWQpOwoKICA8L3NjcmlwdD4KPC9ib2R5Pgo8L2h0bWw+" width="840" style="border:none !important;" height="400"></iframe>`)[0];
+                popup_91054ebffa98501684f3a1b6ca2e0ed8.setContent(i_frame_09d14b4de40c1748771bf99b6ae588bd);
+            
+        
+
+        geo_json_db43a7e7e40fe7d3c5a025669702ecc1.bindPopup(popup_91054ebffa98501684f3a1b6ca2e0ed8)
+        ;
+
+        
+    
+    
+            geo_json_db43a7e7e40fe7d3c5a025669702ecc1.addTo(feature_group_ddd72be1019de98820d62b263c11b898);
+        
+    
+        function geo_json_e47aff360555cc9bfad2a47d70288a3b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "red", "fillOpacity": 0.5, "weight": 0.4};
+            }
+        }
+
+        function geo_json_e47aff360555cc9bfad2a47d70288a3b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e47aff360555cc9bfad2a47d70288a3b = L.geoJson(null, {
+                onEachFeature: geo_json_e47aff360555cc9bfad2a47d70288a3b_onEachFeature,
+            
+                style: geo_json_e47aff360555cc9bfad2a47d70288a3b_styler,
+        });
+
+        function geo_json_e47aff360555cc9bfad2a47d70288a3b_add (data) {
+            geo_json_e47aff360555cc9bfad2a47d70288a3b
+                .addData(data);
+        }
+            geo_json_e47aff360555cc9bfad2a47d70288a3b_add({"bbox": [5.295960864835905, 53.38494280409108, 5.302455782223433, 53.38775488819533], "features": [{"bbox": [5.295960864835905, 53.38494280409108, 5.302455782223433, 53.38775488819533], "geometry": {"coordinates": [[[5.296489520913781, 53.385187460733306], [5.297421655985829, 53.38528063428117], [5.297270611391639, 53.385731070364216], [5.297988073211741, 53.385956286618324], [5.2985544904376525, 53.38582115700871], [5.2987432961799925, 53.38498784827141], [5.299951652929792, 53.38494280409108], [5.300555831303853, 53.38528063428117], [5.3007823981951105, 53.38588872186716], [5.301462099114218, 53.386249065962346], [5.302418020961085, 53.386696406180306], [5.302455782223433, 53.3872143900185], [5.301813842700426, 53.38775488819533], [5.300983097435136, 53.38775488819533], [5.299774740686104, 53.38755220218289], [5.2984153393429665, 53.38768732629859], [5.297244743742169, 53.387597243602414], [5.296753848812415, 53.38703422243458], [5.296678326655211, 53.386718927323585], [5.296036387132148, 53.38640362988201], [5.295960864835905, 53.38590815775575], [5.296489520913781, 53.385187460733306]]], "type": "Polygon"}, "id": "4", "properties": {"Wijk": "Landerum", "kraamverblijf": 0, "paarverblijf": 0, "winterverblijf": 0, "zommerverblijf": 1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_e47aff360555cc9bfad2a47d70288a3b.bindTooltip(
+                `<div style="background-color: white; color: black; font-family:courier new; font-size: 14px; padding: 10px;">
+                     Klik op de veelhoek om de grafiek te zien
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        var popup_757c9d7ed649fd9c02678cb2c5430ff9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var i_frame_257753554cc6fad69cf918ad1007da8a = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8IURPQ1RZUEUgaHRtbD4KPGh0bWw+CjxoZWFkPgogIDxzdHlsZT4KICAgICN2aXMudmVnYS1lbWJlZCB7CiAgICAgIHdpZHRoOiAxMDAlOwogICAgICBkaXNwbGF5OiBmbGV4OwogICAgfQoKICAgICN2aXMudmVnYS1lbWJlZCBkZXRhaWxzLAogICAgI3Zpcy52ZWdhLWVtYmVkIGRldGFpbHMgc3VtbWFyeSB7CiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTsKICAgIH0KICA8L3N0eWxlPgogIDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9ucG0vdmVnYUA1Ij48L3NjcmlwdD4KICA8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL3ZlZ2EtbGl0ZUA1LjguMCI+PC9zY3JpcHQ+CiAgPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS92ZWdhLWVtYmVkQDYiPjwvc2NyaXB0Pgo8L2hlYWQ+Cjxib2R5PgogIDxkaXYgaWQ9InZpcyI+PC9kaXY+CiAgPHNjcmlwdD4KICAgIChmdW5jdGlvbih2ZWdhRW1iZWQpIHsKICAgICAgdmFyIHNwZWMgPSB7ImNvbmZpZyI6IHsidmlldyI6IHsiY29udGludW91c1dpZHRoIjogMzAwLCAiY29udGludW91c0hlaWdodCI6IDMwMCwgInN0cm9rZSI6IG51bGx9fSwgImRhdGEiOiB7Im5hbWUiOiAiZGF0YS04NjhiMTk0NWM1NDgyODFlMGY5MjAyOWVjOWM5NTNlNSJ9LCAibWFyayI6IHsidHlwZSI6ICJiYXIiLCAiY29ybmVyUmFkaXVzVG9wTGVmdCI6IDgsICJjb3JuZXJSYWRpdXNUb3BSaWdodCI6IDh9LCAiZW5jb2RpbmciOiB7ImNvbG9yIjogeyJjb25kaXRpb24iOiB7InRlc3QiOiAiKGRhdHVtLldpamsgPT09ICdMYW5kZXJ1bScpIiwgInZhbHVlIjogIlJlZCJ9LCAidmFsdWUiOiAibGlnaHRncmV5In0sICJjb2x1bW4iOiB7ImZpZWxkIjogInZhcmlhYmxlIiwgImhlYWRlciI6IHsibGFiZWxGb250V2VpZ2h0IjogNjAwfSwgInNwYWNpbmciOiAxMiwgInRpdGxlIjogbnVsbCwgInR5cGUiOiAibm9taW5hbCJ9LCAidG9vbHRpcCI6IFt7ImZpZWxkIjogIldpamsiLCAidGl0bGUiOiAiR2ViaWVkIiwgInR5cGUiOiAibm9taW5hbCJ9LCB7ImZpZWxkIjogInZhbHVlIiwgInRpdGxlIjogIkFhbnRhbCIsICJ0eXBlIjogInF1YW50aXRhdGl2ZSJ9XSwgIngiOiB7ImF4aXMiOiB7ImdyaWQiOiBmYWxzZSwgImxhYmVscyI6IHRydWUsICJ0aWNrcyI6IGZhbHNlfSwgImZpZWxkIjogIldpamsiLCAidGl0bGUiOiBudWxsLCAidHlwZSI6ICJub21pbmFsIn0sICJ5IjogeyJheGlzIjogeyJncmlkIjogZmFsc2UsICJsYWJlbHMiOiB0cnVlLCAidGlja3MiOiBmYWxzZX0sICJmaWVsZCI6ICJ2YWx1ZSIsICJzY2FsZSI6IHsiZG9tYWluIjogWzAsIDZdfSwgInRpdGxlIjogIkFhbnRhbCIsICJ0eXBlIjogInF1YW50aXRhdGl2ZSJ9fSwgImhlaWdodCI6IDIwMCwgInRpdGxlIjogeyJ0ZXh0IjogIkxhbmRlcnVtIiwgImFuY2hvciI6ICJzdGFydCIsICJmb250U2l6ZSI6IDI4LCAic3VidGl0bGUiOiAiICJ9LCAid2lkdGgiOiAxODAsICIkc2NoZW1hIjogImh0dHBzOi8vdmVnYS5naXRodWIuaW8vc2NoZW1hL3ZlZ2EtbGl0ZS92NS44LjAuanNvbiIsICJkYXRhc2V0cyI6IHsiZGF0YS04NjhiMTk0NWM1NDgyODFlMGY5MjAyOWVjOWM5NTNlNSI6IFt7IldpamsiOiAiQmFhaWR1aW5lbiIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJNaWRzbGFuZCIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJPb3N0ZXJlbmQiLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiV2VzdCBUZXJzY2hlbGxpbmciLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTGFuZGVydW0iLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiRm9ybWVydW0iLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQgYWFuIFplZSIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJXZXN0IGFhIFplZSIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJMaWVzIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkhvb3JuIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkJhYWlkdWluZW4iLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJNaWRzbGFuZCIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIk9vc3RlcmVuZCIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIldlc3QgVGVyc2NoZWxsaW5nIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDV9LCB7IldpamsiOiAiTGFuZGVydW0iLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJGb3JtZXJ1bSIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIk1pZHNsYW5kIGFhbiBaZWUiLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJXZXN0IGFhIFplZSIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAyfSwgeyJXaWprIjogIkxpZXMiLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJIb29ybiIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAyfSwgeyJXaWprIjogIkJhYWlkdWluZW4iLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJPb3N0ZXJlbmQiLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIldlc3QgVGVyc2NoZWxsaW5nIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJMYW5kZXJ1bSIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiRm9ybWVydW0iLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIGFhbiBaZWUiLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIldlc3QgYWEgWmVlIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMn0sIHsiV2lqayI6ICJMaWVzIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJIb29ybiIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiQmFhaWR1aW5lbiIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk9vc3RlcmVuZCIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiV2VzdCBUZXJzY2hlbGxpbmciLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIkxhbmRlcnVtIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJGb3JtZXJ1bSIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQgYWFuIFplZSIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiV2VzdCBhYSBaZWUiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkxpZXMiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkhvb3JuIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMn1dfX07CiAgICAgIHZhciBlbWJlZE9wdCA9IHsibW9kZSI6ICJ2ZWdhLWxpdGUifTsKCiAgICAgIGZ1bmN0aW9uIHNob3dFcnJvcihlbCwgZXJyb3IpewogICAgICAgICAgZWwuaW5uZXJIVE1MID0gKCc8ZGl2IHN0eWxlPSJjb2xvcjpyZWQ7Ij4nCiAgICAgICAgICAgICAgICAgICAgICAgICAgKyAnPHA+SmF2YVNjcmlwdCBFcnJvcjogJyArIGVycm9yLm1lc3NhZ2UgKyAnPC9wPicKICAgICAgICAgICAgICAgICAgICAgICAgICArICI8cD5UaGlzIHVzdWFsbHkgbWVhbnMgdGhlcmUncyBhIHR5cG8gaW4geW91ciBjaGFydCBzcGVjaWZpY2F0aW9uLiAiCiAgICAgICAgICAgICAgICAgICAgICAgICAgKyAiU2VlIHRoZSBqYXZhc2NyaXB0IGNvbnNvbGUgZm9yIHRoZSBmdWxsIHRyYWNlYmFjay48L3A+IgogICAgICAgICAgICAgICAgICAgICAgICAgICsgJzwvZGl2PicpOwogICAgICAgICAgdGhyb3cgZXJyb3I7CiAgICAgIH0KICAgICAgY29uc3QgZWwgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgndmlzJyk7CiAgICAgIHZlZ2FFbWJlZCgiI3ZpcyIsIHNwZWMsIGVtYmVkT3B0KQogICAgICAgIC5jYXRjaChlcnJvciA9PiBzaG93RXJyb3IoZWwsIGVycm9yKSk7CiAgICB9KSh2ZWdhRW1iZWQpOwoKICA8L3NjcmlwdD4KPC9ib2R5Pgo8L2h0bWw+" width="840" style="border:none !important;" height="400"></iframe>`)[0];
+                popup_757c9d7ed649fd9c02678cb2c5430ff9.setContent(i_frame_257753554cc6fad69cf918ad1007da8a);
+            
+        
+
+        geo_json_e47aff360555cc9bfad2a47d70288a3b.bindPopup(popup_757c9d7ed649fd9c02678cb2c5430ff9)
+        ;
+
+        
+    
+    
+            geo_json_e47aff360555cc9bfad2a47d70288a3b.addTo(feature_group_ddd72be1019de98820d62b263c11b898);
+        
+    
+        function geo_json_9e75ca50f91cfbbac011d8cab5edb78b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "red", "fillOpacity": 0.5, "weight": 0.4};
+            }
+        }
+
+        function geo_json_9e75ca50f91cfbbac011d8cab5edb78b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_9e75ca50f91cfbbac011d8cab5edb78b = L.geoJson(null, {
+                onEachFeature: geo_json_9e75ca50f91cfbbac011d8cab5edb78b_onEachFeature,
+            
+                style: geo_json_9e75ca50f91cfbbac011d8cab5edb78b_styler,
+        });
+
+        function geo_json_9e75ca50f91cfbbac011d8cab5edb78b_add (data) {
+            geo_json_9e75ca50f91cfbbac011d8cab5edb78b
+                .addData(data);
+        }
+            geo_json_9e75ca50f91cfbbac011d8cab5edb78b_add({"bbox": [5.301102335233196, 53.3870381947973, 5.318780315649832, 53.39268370426305], "features": [{"bbox": [5.301102335233196, 53.3870381947973, 5.318780315649832, 53.39268370426305], "geometry": {"coordinates": [[[5.30515428842719, 53.388064706745894], [5.30605073758656, 53.387765309984445], [5.307700204040174, 53.38716651014445], [5.309636534224069, 53.3870381947973], [5.312541029500295, 53.3875514538654], [5.315373808844413, 53.38817163365056], [5.316772269532976, 53.387915008628624], [5.318636883783938, 53.38836410140175], [5.318780315649832, 53.389219503101515], [5.315696529647568, 53.389925196622414], [5.315875819439128, 53.390352883929836], [5.316879842497542, 53.390545341819006], [5.316951558430532, 53.39114409413196], [5.314692506548624, 53.39223465706064], [5.3125768865327245, 53.39268370426305], [5.3108557041461495, 53.39268370426305], [5.310281976684706, 53.39182837217638], [5.308704226164139, 53.39135793220234], [5.306983043778331, 53.39122962948892], [5.305871446820021, 53.39088748702929], [5.304472984072618, 53.39022457864996], [5.303110381350081, 53.39037426864604], [5.301317483031369, 53.39009627252037], [5.301102335233196, 53.389347812388905], [5.301532630829485, 53.388599339097794], [5.30515428842719, 53.388064706745894]]], "type": "Polygon"}, "id": "5", "properties": {"Wijk": "Formerum", "kraamverblijf": 0, "paarverblijf": 1, "winterverblijf": 0, "zommerverblijf": 0}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_9e75ca50f91cfbbac011d8cab5edb78b.bindTooltip(
+                `<div style="background-color: white; color: black; font-family:courier new; font-size: 14px; padding: 10px;">
+                     Klik op de veelhoek om de grafiek te zien
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        var popup_5eb6d8eb845901c786d2482eaefc4b4a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var i_frame_91e09cbbfc2baa7347489c3ea1322092 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8IURPQ1RZUEUgaHRtbD4KPGh0bWw+CjxoZWFkPgogIDxzdHlsZT4KICAgICN2aXMudmVnYS1lbWJlZCB7CiAgICAgIHdpZHRoOiAxMDAlOwogICAgICBkaXNwbGF5OiBmbGV4OwogICAgfQoKICAgICN2aXMudmVnYS1lbWJlZCBkZXRhaWxzLAogICAgI3Zpcy52ZWdhLWVtYmVkIGRldGFpbHMgc3VtbWFyeSB7CiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTsKICAgIH0KICA8L3N0eWxlPgogIDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9ucG0vdmVnYUA1Ij48L3NjcmlwdD4KICA8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL3ZlZ2EtbGl0ZUA1LjguMCI+PC9zY3JpcHQ+CiAgPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS92ZWdhLWVtYmVkQDYiPjwvc2NyaXB0Pgo8L2hlYWQ+Cjxib2R5PgogIDxkaXYgaWQ9InZpcyI+PC9kaXY+CiAgPHNjcmlwdD4KICAgIChmdW5jdGlvbih2ZWdhRW1iZWQpIHsKICAgICAgdmFyIHNwZWMgPSB7ImNvbmZpZyI6IHsidmlldyI6IHsiY29udGludW91c1dpZHRoIjogMzAwLCAiY29udGludW91c0hlaWdodCI6IDMwMCwgInN0cm9rZSI6IG51bGx9fSwgImRhdGEiOiB7Im5hbWUiOiAiZGF0YS04NjhiMTk0NWM1NDgyODFlMGY5MjAyOWVjOWM5NTNlNSJ9LCAibWFyayI6IHsidHlwZSI6ICJiYXIiLCAiY29ybmVyUmFkaXVzVG9wTGVmdCI6IDgsICJjb3JuZXJSYWRpdXNUb3BSaWdodCI6IDh9LCAiZW5jb2RpbmciOiB7ImNvbG9yIjogeyJjb25kaXRpb24iOiB7InRlc3QiOiAiKGRhdHVtLldpamsgPT09ICdGb3JtZXJ1bScpIiwgInZhbHVlIjogIlJlZCJ9LCAidmFsdWUiOiAibGlnaHRncmV5In0sICJjb2x1bW4iOiB7ImZpZWxkIjogInZhcmlhYmxlIiwgImhlYWRlciI6IHsibGFiZWxGb250V2VpZ2h0IjogNjAwfSwgInNwYWNpbmciOiAxMiwgInRpdGxlIjogbnVsbCwgInR5cGUiOiAibm9taW5hbCJ9LCAidG9vbHRpcCI6IFt7ImZpZWxkIjogIldpamsiLCAidGl0bGUiOiAiR2ViaWVkIiwgInR5cGUiOiAibm9taW5hbCJ9LCB7ImZpZWxkIjogInZhbHVlIiwgInRpdGxlIjogIkFhbnRhbCIsICJ0eXBlIjogInF1YW50aXRhdGl2ZSJ9XSwgIngiOiB7ImF4aXMiOiB7ImdyaWQiOiBmYWxzZSwgImxhYmVscyI6IHRydWUsICJ0aWNrcyI6IGZhbHNlfSwgImZpZWxkIjogIldpamsiLCAidGl0bGUiOiBudWxsLCAidHlwZSI6ICJub21pbmFsIn0sICJ5IjogeyJheGlzIjogeyJncmlkIjogZmFsc2UsICJsYWJlbHMiOiB0cnVlLCAidGlja3MiOiBmYWxzZX0sICJmaWVsZCI6ICJ2YWx1ZSIsICJzY2FsZSI6IHsiZG9tYWluIjogWzAsIDZdfSwgInRpdGxlIjogIkFhbnRhbCIsICJ0eXBlIjogInF1YW50aXRhdGl2ZSJ9fSwgImhlaWdodCI6IDIwMCwgInRpdGxlIjogeyJ0ZXh0IjogIkZvcm1lcnVtIiwgImFuY2hvciI6ICJzdGFydCIsICJmb250U2l6ZSI6IDI4LCAic3VidGl0bGUiOiAiICJ9LCAid2lkdGgiOiAxODAsICIkc2NoZW1hIjogImh0dHBzOi8vdmVnYS5naXRodWIuaW8vc2NoZW1hL3ZlZ2EtbGl0ZS92NS44LjAuanNvbiIsICJkYXRhc2V0cyI6IHsiZGF0YS04NjhiMTk0NWM1NDgyODFlMGY5MjAyOWVjOWM5NTNlNSI6IFt7IldpamsiOiAiQmFhaWR1aW5lbiIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJNaWRzbGFuZCIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJPb3N0ZXJlbmQiLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiV2VzdCBUZXJzY2hlbGxpbmciLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTGFuZGVydW0iLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiRm9ybWVydW0iLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQgYWFuIFplZSIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJXZXN0IGFhIFplZSIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJMaWVzIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkhvb3JuIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkJhYWlkdWluZW4iLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJNaWRzbGFuZCIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIk9vc3RlcmVuZCIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIldlc3QgVGVyc2NoZWxsaW5nIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDV9LCB7IldpamsiOiAiTGFuZGVydW0iLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJGb3JtZXJ1bSIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIk1pZHNsYW5kIGFhbiBaZWUiLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJXZXN0IGFhIFplZSIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAyfSwgeyJXaWprIjogIkxpZXMiLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJIb29ybiIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAyfSwgeyJXaWprIjogIkJhYWlkdWluZW4iLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJPb3N0ZXJlbmQiLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIldlc3QgVGVyc2NoZWxsaW5nIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJMYW5kZXJ1bSIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiRm9ybWVydW0iLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIGFhbiBaZWUiLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIldlc3QgYWEgWmVlIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMn0sIHsiV2lqayI6ICJMaWVzIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJIb29ybiIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiQmFhaWR1aW5lbiIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk9vc3RlcmVuZCIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiV2VzdCBUZXJzY2hlbGxpbmciLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIkxhbmRlcnVtIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJGb3JtZXJ1bSIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQgYWFuIFplZSIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiV2VzdCBhYSBaZWUiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkxpZXMiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkhvb3JuIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMn1dfX07CiAgICAgIHZhciBlbWJlZE9wdCA9IHsibW9kZSI6ICJ2ZWdhLWxpdGUifTsKCiAgICAgIGZ1bmN0aW9uIHNob3dFcnJvcihlbCwgZXJyb3IpewogICAgICAgICAgZWwuaW5uZXJIVE1MID0gKCc8ZGl2IHN0eWxlPSJjb2xvcjpyZWQ7Ij4nCiAgICAgICAgICAgICAgICAgICAgICAgICAgKyAnPHA+SmF2YVNjcmlwdCBFcnJvcjogJyArIGVycm9yLm1lc3NhZ2UgKyAnPC9wPicKICAgICAgICAgICAgICAgICAgICAgICAgICArICI8cD5UaGlzIHVzdWFsbHkgbWVhbnMgdGhlcmUncyBhIHR5cG8gaW4geW91ciBjaGFydCBzcGVjaWZpY2F0aW9uLiAiCiAgICAgICAgICAgICAgICAgICAgICAgICAgKyAiU2VlIHRoZSBqYXZhc2NyaXB0IGNvbnNvbGUgZm9yIHRoZSBmdWxsIHRyYWNlYmFjay48L3A+IgogICAgICAgICAgICAgICAgICAgICAgICAgICsgJzwvZGl2PicpOwogICAgICAgICAgdGhyb3cgZXJyb3I7CiAgICAgIH0KICAgICAgY29uc3QgZWwgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgndmlzJyk7CiAgICAgIHZlZ2FFbWJlZCgiI3ZpcyIsIHNwZWMsIGVtYmVkT3B0KQogICAgICAgIC5jYXRjaChlcnJvciA9PiBzaG93RXJyb3IoZWwsIGVycm9yKSk7CiAgICB9KSh2ZWdhRW1iZWQpOwoKICA8L3NjcmlwdD4KPC9ib2R5Pgo8L2h0bWw+" width="840" style="border:none !important;" height="400"></iframe>`)[0];
+                popup_5eb6d8eb845901c786d2482eaefc4b4a.setContent(i_frame_91e09cbbfc2baa7347489c3ea1322092);
+            
+        
+
+        geo_json_9e75ca50f91cfbbac011d8cab5edb78b.bindPopup(popup_5eb6d8eb845901c786d2482eaefc4b4a)
+        ;
+
+        
+    
+    
+            geo_json_9e75ca50f91cfbbac011d8cab5edb78b.addTo(feature_group_ddd72be1019de98820d62b263c11b898);
+        
+    
+        function geo_json_4ed858c89353a9755434a746792d2ff2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "red", "fillOpacity": 0.5, "weight": 0.4};
+            }
+        }
+
+        function geo_json_4ed858c89353a9755434a746792d2ff2_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_4ed858c89353a9755434a746792d2ff2 = L.geoJson(null, {
+                onEachFeature: geo_json_4ed858c89353a9755434a746792d2ff2_onEachFeature,
+            
+                style: geo_json_4ed858c89353a9755434a746792d2ff2_styler,
+        });
+
+        function geo_json_4ed858c89353a9755434a746792d2ff2_add (data) {
+            geo_json_4ed858c89353a9755434a746792d2ff2
+                .addData(data);
+        }
+            geo_json_4ed858c89353a9755434a746792d2ff2_add({"bbox": [5.280353820489552, 53.40087587476742, 5.292420872241905, 53.40560692792937], "features": [{"bbox": [5.280353820489552, 53.40087587476742, 5.292420872241905, 53.40560692792937], "geometry": {"coordinates": [[[5.286612325934385, 53.40087587476742], [5.288575778207132, 53.40109536826162], [5.290907377780826, 53.40141241242142], [5.292339061730274, 53.40204649365339], [5.292420872241905, 53.403168306531825], [5.292093629334914, 53.404094999137214], [5.291480050499871, 53.40499728577046], [5.29090737664697, 53.405387457708116], [5.29013017678875, 53.40560692792937], [5.287103187867501, 53.405558156866874], [5.285998745964633, 53.40526552931834], [5.282971757043384, 53.40470465422504], [5.28125373630462, 53.404094998997664], [5.280353820489552, 53.403753588341374], [5.280476536256543, 53.402997597660175], [5.282317272762327, 53.40277811397817], [5.282971756853584, 53.40192455556462], [5.283585335688514, 53.40131486049958], [5.284526156569996, 53.40104659190325], [5.286612325934385, 53.40087587476742]]], "type": "Polygon"}, "id": "6", "properties": {"Wijk": "Midsland aan Zee", "kraamverblijf": 1, "paarverblijf": 1, "winterverblijf": 0, "zommerverblijf": 0}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_4ed858c89353a9755434a746792d2ff2.bindTooltip(
+                `<div style="background-color: white; color: black; font-family:courier new; font-size: 14px; padding: 10px;">
+                     Klik op de veelhoek om de grafiek te zien
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        var popup_a229cba949cb83a0533d87a8f03bd40f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var i_frame_470f38eb6c65f8d98604b6891ca0519a = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8IURPQ1RZUEUgaHRtbD4KPGh0bWw+CjxoZWFkPgogIDxzdHlsZT4KICAgICN2aXMudmVnYS1lbWJlZCB7CiAgICAgIHdpZHRoOiAxMDAlOwogICAgICBkaXNwbGF5OiBmbGV4OwogICAgfQoKICAgICN2aXMudmVnYS1lbWJlZCBkZXRhaWxzLAogICAgI3Zpcy52ZWdhLWVtYmVkIGRldGFpbHMgc3VtbWFyeSB7CiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTsKICAgIH0KICA8L3N0eWxlPgogIDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9ucG0vdmVnYUA1Ij48L3NjcmlwdD4KICA8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL3ZlZ2EtbGl0ZUA1LjguMCI+PC9zY3JpcHQ+CiAgPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS92ZWdhLWVtYmVkQDYiPjwvc2NyaXB0Pgo8L2hlYWQ+Cjxib2R5PgogIDxkaXYgaWQ9InZpcyI+PC9kaXY+CiAgPHNjcmlwdD4KICAgIChmdW5jdGlvbih2ZWdhRW1iZWQpIHsKICAgICAgdmFyIHNwZWMgPSB7ImNvbmZpZyI6IHsidmlldyI6IHsiY29udGludW91c1dpZHRoIjogMzAwLCAiY29udGludW91c0hlaWdodCI6IDMwMCwgInN0cm9rZSI6IG51bGx9fSwgImRhdGEiOiB7Im5hbWUiOiAiZGF0YS04NjhiMTk0NWM1NDgyODFlMGY5MjAyOWVjOWM5NTNlNSJ9LCAibWFyayI6IHsidHlwZSI6ICJiYXIiLCAiY29ybmVyUmFkaXVzVG9wTGVmdCI6IDgsICJjb3JuZXJSYWRpdXNUb3BSaWdodCI6IDh9LCAiZW5jb2RpbmciOiB7ImNvbG9yIjogeyJjb25kaXRpb24iOiB7InRlc3QiOiAiKGRhdHVtLldpamsgPT09ICdNaWRzbGFuZCBhYW4gWmVlJykiLCAidmFsdWUiOiAiUmVkIn0sICJ2YWx1ZSI6ICJsaWdodGdyZXkifSwgImNvbHVtbiI6IHsiZmllbGQiOiAidmFyaWFibGUiLCAiaGVhZGVyIjogeyJsYWJlbEZvbnRXZWlnaHQiOiA2MDB9LCAic3BhY2luZyI6IDEyLCAidGl0bGUiOiBudWxsLCAidHlwZSI6ICJub21pbmFsIn0sICJ0b29sdGlwIjogW3siZmllbGQiOiAiV2lqayIsICJ0aXRsZSI6ICJHZWJpZWQiLCAidHlwZSI6ICJub21pbmFsIn0sIHsiZmllbGQiOiAidmFsdWUiLCAidGl0bGUiOiAiQWFudGFsIiwgInR5cGUiOiAicXVhbnRpdGF0aXZlIn1dLCAieCI6IHsiYXhpcyI6IHsiZ3JpZCI6IGZhbHNlLCAibGFiZWxzIjogdHJ1ZSwgInRpY2tzIjogZmFsc2V9LCAiZmllbGQiOiAiV2lqayIsICJ0aXRsZSI6IG51bGwsICJ0eXBlIjogIm5vbWluYWwifSwgInkiOiB7ImF4aXMiOiB7ImdyaWQiOiBmYWxzZSwgImxhYmVscyI6IHRydWUsICJ0aWNrcyI6IGZhbHNlfSwgImZpZWxkIjogInZhbHVlIiwgInNjYWxlIjogeyJkb21haW4iOiBbMCwgNl19LCAidGl0bGUiOiAiQWFudGFsIiwgInR5cGUiOiAicXVhbnRpdGF0aXZlIn19LCAiaGVpZ2h0IjogMjAwLCAidGl0bGUiOiB7InRleHQiOiAiTWlkc2xhbmQgYWFuIFplZSIsICJhbmNob3IiOiAic3RhcnQiLCAiZm9udFNpemUiOiAyOCwgInN1YnRpdGxlIjogIiAifSwgIndpZHRoIjogMTgwLCAiJHNjaGVtYSI6ICJodHRwczovL3ZlZ2EuZ2l0aHViLmlvL3NjaGVtYS92ZWdhLWxpdGUvdjUuOC4wLmpzb24iLCAiZGF0YXNldHMiOiB7ImRhdGEtODY4YjE5NDVjNTQ4MjgxZTBmOTIwMjllYzljOTUzZTUiOiBbeyJXaWprIjogIkJhYWlkdWluZW4iLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQiLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiT29zdGVyZW5kIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIldlc3QgVGVyc2NoZWxsaW5nIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIkxhbmRlcnVtIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIkZvcm1lcnVtIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIGFhbiBaZWUiLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiV2VzdCBhYSBaZWUiLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTGllcyIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJIb29ybiIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJCYWFpZHVpbmVuIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQiLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJPb3N0ZXJlbmQiLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJXZXN0IFRlcnNjaGVsbGluZyIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiA1fSwgeyJXaWprIjogIkxhbmRlcnVtIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiRm9ybWVydW0iLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJNaWRzbGFuZCBhYW4gWmVlIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiV2VzdCBhYSBaZWUiLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMn0sIHsiV2lqayI6ICJMaWVzIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiSG9vcm4iLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMn0sIHsiV2lqayI6ICJCYWFpZHVpbmVuIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJNaWRzbGFuZCIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiT29zdGVyZW5kIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJXZXN0IFRlcnNjaGVsbGluZyIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTGFuZGVydW0iLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIkZvcm1lcnVtIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJNaWRzbGFuZCBhYW4gWmVlIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJXZXN0IGFhIFplZSIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDJ9LCB7IldpamsiOiAiTGllcyIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiSG9vcm4iLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIkJhYWlkdWluZW4iLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJPb3N0ZXJlbmQiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIldlc3QgVGVyc2NoZWxsaW5nIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJMYW5kZXJ1bSIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiRm9ybWVydW0iLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIGFhbiBaZWUiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIldlc3QgYWEgWmVlIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJMaWVzIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJIb29ybiIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDJ9XX19OwogICAgICB2YXIgZW1iZWRPcHQgPSB7Im1vZGUiOiAidmVnYS1saXRlIn07CgogICAgICBmdW5jdGlvbiBzaG93RXJyb3IoZWwsIGVycm9yKXsKICAgICAgICAgIGVsLmlubmVySFRNTCA9ICgnPGRpdiBzdHlsZT0iY29sb3I6cmVkOyI+JwogICAgICAgICAgICAgICAgICAgICAgICAgICsgJzxwPkphdmFTY3JpcHQgRXJyb3I6ICcgKyBlcnJvci5tZXNzYWdlICsgJzwvcD4nCiAgICAgICAgICAgICAgICAgICAgICAgICAgKyAiPHA+VGhpcyB1c3VhbGx5IG1lYW5zIHRoZXJlJ3MgYSB0eXBvIGluIHlvdXIgY2hhcnQgc3BlY2lmaWNhdGlvbi4gIgogICAgICAgICAgICAgICAgICAgICAgICAgICsgIlNlZSB0aGUgamF2YXNjcmlwdCBjb25zb2xlIGZvciB0aGUgZnVsbCB0cmFjZWJhY2suPC9wPiIKICAgICAgICAgICAgICAgICAgICAgICAgICArICc8L2Rpdj4nKTsKICAgICAgICAgIHRocm93IGVycm9yOwogICAgICB9CiAgICAgIGNvbnN0IGVsID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3ZpcycpOwogICAgICB2ZWdhRW1iZWQoIiN2aXMiLCBzcGVjLCBlbWJlZE9wdCkKICAgICAgICAuY2F0Y2goZXJyb3IgPT4gc2hvd0Vycm9yKGVsLCBlcnJvcikpOwogICAgfSkodmVnYUVtYmVkKTsKCiAgPC9zY3JpcHQ+CjwvYm9keT4KPC9odG1sPg==" width="840" style="border:none !important;" height="400"></iframe>`)[0];
+                popup_a229cba949cb83a0533d87a8f03bd40f.setContent(i_frame_470f38eb6c65f8d98604b6891ca0519a);
+            
+        
+
+        geo_json_4ed858c89353a9755434a746792d2ff2.bindPopup(popup_a229cba949cb83a0533d87a8f03bd40f)
+        ;
+
+        
+    
+    
+            geo_json_4ed858c89353a9755434a746792d2ff2.addTo(feature_group_ddd72be1019de98820d62b263c11b898);
+        
+    
+        function geo_json_6990bb898d38f21a84856a4fb662e204_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "red", "fillOpacity": 0.5, "weight": 0.4};
+            }
+        }
+
+        function geo_json_6990bb898d38f21a84856a4fb662e204_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_6990bb898d38f21a84856a4fb662e204 = L.geoJson(null, {
+                onEachFeature: geo_json_6990bb898d38f21a84856a4fb662e204_onEachFeature,
+            
+                style: geo_json_6990bb898d38f21a84856a4fb662e204_styler,
+        });
+
+        function geo_json_6990bb898d38f21a84856a4fb662e204_add (data) {
+            geo_json_6990bb898d38f21a84856a4fb662e204
+                .addData(data);
+        }
+            geo_json_6990bb898d38f21a84856a4fb662e204_add({"bbox": [5.253634467400616, 53.39760623685285, 5.264104293646824, 53.401111553054136], "features": [{"bbox": [5.253634467400616, 53.39760623685285, 5.264104293646824, 53.401111553054136], "geometry": {"coordinates": [[[5.25521659334035, 53.39760623685285], [5.25568251267282, 53.39784623351733], [5.257288979012031, 53.39809295526294], [5.258603363340313, 53.398412240456906], [5.2604288932709835, 53.39873152290295], [5.261232126441115, 53.39852834344174], [5.260355872073859, 53.398107468614796], [5.260915701369214, 53.397686589692], [5.262960294890178, 53.39781720775389], [5.264104293646824, 53.39832516307624], [5.263690506863156, 53.39907982835962], [5.263155018083438, 53.39983448025947], [5.263203698894728, 53.40092289699629], [5.262522167720675, 53.401111553054136], [5.257480250455302, 53.39976864390965], [5.254900168153313, 53.39936229392106], [5.253683148199485, 53.39915911747164], [5.253634467400616, 53.39834640197276], [5.25521659334035, 53.39760623685285]]], "type": "Polygon"}, "id": "7", "properties": {"Wijk": "West aa Zee", "kraamverblijf": 0, "paarverblijf": 2, "winterverblijf": 2, "zommerverblijf": 1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_6990bb898d38f21a84856a4fb662e204.bindTooltip(
+                `<div style="background-color: white; color: black; font-family:courier new; font-size: 14px; padding: 10px;">
+                     Klik op de veelhoek om de grafiek te zien
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        var popup_417bb8e934650fa9b158a6612e8b8d5e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var i_frame_4e6299ab2df34592a93b28fda1c9afdc = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8IURPQ1RZUEUgaHRtbD4KPGh0bWw+CjxoZWFkPgogIDxzdHlsZT4KICAgICN2aXMudmVnYS1lbWJlZCB7CiAgICAgIHdpZHRoOiAxMDAlOwogICAgICBkaXNwbGF5OiBmbGV4OwogICAgfQoKICAgICN2aXMudmVnYS1lbWJlZCBkZXRhaWxzLAogICAgI3Zpcy52ZWdhLWVtYmVkIGRldGFpbHMgc3VtbWFyeSB7CiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTsKICAgIH0KICA8L3N0eWxlPgogIDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9ucG0vdmVnYUA1Ij48L3NjcmlwdD4KICA8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL3ZlZ2EtbGl0ZUA1LjguMCI+PC9zY3JpcHQ+CiAgPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS92ZWdhLWVtYmVkQDYiPjwvc2NyaXB0Pgo8L2hlYWQ+Cjxib2R5PgogIDxkaXYgaWQ9InZpcyI+PC9kaXY+CiAgPHNjcmlwdD4KICAgIChmdW5jdGlvbih2ZWdhRW1iZWQpIHsKICAgICAgdmFyIHNwZWMgPSB7ImNvbmZpZyI6IHsidmlldyI6IHsiY29udGludW91c1dpZHRoIjogMzAwLCAiY29udGludW91c0hlaWdodCI6IDMwMCwgInN0cm9rZSI6IG51bGx9fSwgImRhdGEiOiB7Im5hbWUiOiAiZGF0YS04NjhiMTk0NWM1NDgyODFlMGY5MjAyOWVjOWM5NTNlNSJ9LCAibWFyayI6IHsidHlwZSI6ICJiYXIiLCAiY29ybmVyUmFkaXVzVG9wTGVmdCI6IDgsICJjb3JuZXJSYWRpdXNUb3BSaWdodCI6IDh9LCAiZW5jb2RpbmciOiB7ImNvbG9yIjogeyJjb25kaXRpb24iOiB7InRlc3QiOiAiKGRhdHVtLldpamsgPT09ICdXZXN0IGFhIFplZScpIiwgInZhbHVlIjogIlJlZCJ9LCAidmFsdWUiOiAibGlnaHRncmV5In0sICJjb2x1bW4iOiB7ImZpZWxkIjogInZhcmlhYmxlIiwgImhlYWRlciI6IHsibGFiZWxGb250V2VpZ2h0IjogNjAwfSwgInNwYWNpbmciOiAxMiwgInRpdGxlIjogbnVsbCwgInR5cGUiOiAibm9taW5hbCJ9LCAidG9vbHRpcCI6IFt7ImZpZWxkIjogIldpamsiLCAidGl0bGUiOiAiR2ViaWVkIiwgInR5cGUiOiAibm9taW5hbCJ9LCB7ImZpZWxkIjogInZhbHVlIiwgInRpdGxlIjogIkFhbnRhbCIsICJ0eXBlIjogInF1YW50aXRhdGl2ZSJ9XSwgIngiOiB7ImF4aXMiOiB7ImdyaWQiOiBmYWxzZSwgImxhYmVscyI6IHRydWUsICJ0aWNrcyI6IGZhbHNlfSwgImZpZWxkIjogIldpamsiLCAidGl0bGUiOiBudWxsLCAidHlwZSI6ICJub21pbmFsIn0sICJ5IjogeyJheGlzIjogeyJncmlkIjogZmFsc2UsICJsYWJlbHMiOiB0cnVlLCAidGlja3MiOiBmYWxzZX0sICJmaWVsZCI6ICJ2YWx1ZSIsICJzY2FsZSI6IHsiZG9tYWluIjogWzAsIDZdfSwgInRpdGxlIjogIkFhbnRhbCIsICJ0eXBlIjogInF1YW50aXRhdGl2ZSJ9fSwgImhlaWdodCI6IDIwMCwgInRpdGxlIjogeyJ0ZXh0IjogIldlc3QgYWEgWmVlIiwgImFuY2hvciI6ICJzdGFydCIsICJmb250U2l6ZSI6IDI4LCAic3VidGl0bGUiOiAiICJ9LCAid2lkdGgiOiAxODAsICIkc2NoZW1hIjogImh0dHBzOi8vdmVnYS5naXRodWIuaW8vc2NoZW1hL3ZlZ2EtbGl0ZS92NS44LjAuanNvbiIsICJkYXRhc2V0cyI6IHsiZGF0YS04NjhiMTk0NWM1NDgyODFlMGY5MjAyOWVjOWM5NTNlNSI6IFt7IldpamsiOiAiQmFhaWR1aW5lbiIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJNaWRzbGFuZCIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJPb3N0ZXJlbmQiLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiV2VzdCBUZXJzY2hlbGxpbmciLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTGFuZGVydW0iLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiRm9ybWVydW0iLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQgYWFuIFplZSIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJXZXN0IGFhIFplZSIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJMaWVzIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkhvb3JuIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkJhYWlkdWluZW4iLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJNaWRzbGFuZCIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIk9vc3RlcmVuZCIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIldlc3QgVGVyc2NoZWxsaW5nIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDV9LCB7IldpamsiOiAiTGFuZGVydW0iLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJGb3JtZXJ1bSIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIk1pZHNsYW5kIGFhbiBaZWUiLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJXZXN0IGFhIFplZSIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAyfSwgeyJXaWprIjogIkxpZXMiLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJIb29ybiIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAyfSwgeyJXaWprIjogIkJhYWlkdWluZW4iLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJPb3N0ZXJlbmQiLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIldlc3QgVGVyc2NoZWxsaW5nIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJMYW5kZXJ1bSIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiRm9ybWVydW0iLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIGFhbiBaZWUiLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIldlc3QgYWEgWmVlIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMn0sIHsiV2lqayI6ICJMaWVzIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJIb29ybiIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiQmFhaWR1aW5lbiIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk9vc3RlcmVuZCIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiV2VzdCBUZXJzY2hlbGxpbmciLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIkxhbmRlcnVtIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJGb3JtZXJ1bSIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQgYWFuIFplZSIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiV2VzdCBhYSBaZWUiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkxpZXMiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkhvb3JuIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMn1dfX07CiAgICAgIHZhciBlbWJlZE9wdCA9IHsibW9kZSI6ICJ2ZWdhLWxpdGUifTsKCiAgICAgIGZ1bmN0aW9uIHNob3dFcnJvcihlbCwgZXJyb3IpewogICAgICAgICAgZWwuaW5uZXJIVE1MID0gKCc8ZGl2IHN0eWxlPSJjb2xvcjpyZWQ7Ij4nCiAgICAgICAgICAgICAgICAgICAgICAgICAgKyAnPHA+SmF2YVNjcmlwdCBFcnJvcjogJyArIGVycm9yLm1lc3NhZ2UgKyAnPC9wPicKICAgICAgICAgICAgICAgICAgICAgICAgICArICI8cD5UaGlzIHVzdWFsbHkgbWVhbnMgdGhlcmUncyBhIHR5cG8gaW4geW91ciBjaGFydCBzcGVjaWZpY2F0aW9uLiAiCiAgICAgICAgICAgICAgICAgICAgICAgICAgKyAiU2VlIHRoZSBqYXZhc2NyaXB0IGNvbnNvbGUgZm9yIHRoZSBmdWxsIHRyYWNlYmFjay48L3A+IgogICAgICAgICAgICAgICAgICAgICAgICAgICsgJzwvZGl2PicpOwogICAgICAgICAgdGhyb3cgZXJyb3I7CiAgICAgIH0KICAgICAgY29uc3QgZWwgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgndmlzJyk7CiAgICAgIHZlZ2FFbWJlZCgiI3ZpcyIsIHNwZWMsIGVtYmVkT3B0KQogICAgICAgIC5jYXRjaChlcnJvciA9PiBzaG93RXJyb3IoZWwsIGVycm9yKSk7CiAgICB9KSh2ZWdhRW1iZWQpOwoKICA8L3NjcmlwdD4KPC9ib2R5Pgo8L2h0bWw+" width="840" style="border:none !important;" height="400"></iframe>`)[0];
+                popup_417bb8e934650fa9b158a6612e8b8d5e.setContent(i_frame_4e6299ab2df34592a93b28fda1c9afdc);
+            
+        
+
+        geo_json_6990bb898d38f21a84856a4fb662e204.bindPopup(popup_417bb8e934650fa9b158a6612e8b8d5e)
+        ;
+
+        
+    
+    
+            geo_json_6990bb898d38f21a84856a4fb662e204.addTo(feature_group_ddd72be1019de98820d62b263c11b898);
+        
+    
+        function geo_json_47dee461e71ef623914dbcf706e99ab2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "red", "fillOpacity": 0.5, "weight": 0.4};
+            }
+        }
+
+        function geo_json_47dee461e71ef623914dbcf706e99ab2_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_47dee461e71ef623914dbcf706e99ab2 = L.geoJson(null, {
+                onEachFeature: geo_json_47dee461e71ef623914dbcf706e99ab2_onEachFeature,
+            
+                style: geo_json_47dee461e71ef623914dbcf706e99ab2_styler,
+        });
+
+        function geo_json_47dee461e71ef623914dbcf706e99ab2_add (data) {
+            geo_json_47dee461e71ef623914dbcf706e99ab2
+                .addData(data);
+        }
+            geo_json_47dee461e71ef623914dbcf706e99ab2_add({"bbox": [5.320192748940116, 53.39178619913977, 5.334595629596947, 53.39746027371109], "features": [{"bbox": [5.320192748940116, 53.39178619913977, 5.334595629596947, 53.39746027371109], "geometry": {"coordinates": [[[5.325603505779668, 53.39178619913977], [5.32685451125883, 53.3922871924899], [5.326742564589466, 53.392754492330255], [5.3275635068318365, 53.39311052685977], [5.329354620918139, 53.393577815105544], [5.331366035136142, 53.393755829867104], [5.332505958390215, 53.39464086314595], [5.334595629596947, 53.39528614493926], [5.333589033712201, 53.39746027371109], [5.331909833671261, 53.397349024611145], [5.3300067402907985, 53.397104275567784], [5.328439486919223, 53.39697077549636], [5.327394651338182, 53.396926275379315], [5.3247079312724, 53.39603626326971], [5.321536108973049, 53.39570250392953], [5.320192748940116, 53.39474571264864], [5.321200268964191, 53.393944661544936], [5.322021211206476, 53.39314359536414], [5.324782562385565, 53.39265404749804], [5.325603505779668, 53.39178619913977]]], "type": "Polygon"}, "id": "8", "properties": {"Wijk": "Lies", "kraamverblijf": 1, "paarverblijf": 1, "winterverblijf": 0, "zommerverblijf": 1}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_47dee461e71ef623914dbcf706e99ab2.bindTooltip(
+                `<div style="background-color: white; color: black; font-family:courier new; font-size: 14px; padding: 10px;">
+                     Klik op de veelhoek om de grafiek te zien
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        var popup_9a390ffeee192d79d993b2ae363e89b1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var i_frame_2c9762c7fb816169324a9801e0f44c91 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8IURPQ1RZUEUgaHRtbD4KPGh0bWw+CjxoZWFkPgogIDxzdHlsZT4KICAgICN2aXMudmVnYS1lbWJlZCB7CiAgICAgIHdpZHRoOiAxMDAlOwogICAgICBkaXNwbGF5OiBmbGV4OwogICAgfQoKICAgICN2aXMudmVnYS1lbWJlZCBkZXRhaWxzLAogICAgI3Zpcy52ZWdhLWVtYmVkIGRldGFpbHMgc3VtbWFyeSB7CiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTsKICAgIH0KICA8L3N0eWxlPgogIDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9ucG0vdmVnYUA1Ij48L3NjcmlwdD4KICA8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL3ZlZ2EtbGl0ZUA1LjguMCI+PC9zY3JpcHQ+CiAgPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS92ZWdhLWVtYmVkQDYiPjwvc2NyaXB0Pgo8L2hlYWQ+Cjxib2R5PgogIDxkaXYgaWQ9InZpcyI+PC9kaXY+CiAgPHNjcmlwdD4KICAgIChmdW5jdGlvbih2ZWdhRW1iZWQpIHsKICAgICAgdmFyIHNwZWMgPSB7ImNvbmZpZyI6IHsidmlldyI6IHsiY29udGludW91c1dpZHRoIjogMzAwLCAiY29udGludW91c0hlaWdodCI6IDMwMCwgInN0cm9rZSI6IG51bGx9fSwgImRhdGEiOiB7Im5hbWUiOiAiZGF0YS04NjhiMTk0NWM1NDgyODFlMGY5MjAyOWVjOWM5NTNlNSJ9LCAibWFyayI6IHsidHlwZSI6ICJiYXIiLCAiY29ybmVyUmFkaXVzVG9wTGVmdCI6IDgsICJjb3JuZXJSYWRpdXNUb3BSaWdodCI6IDh9LCAiZW5jb2RpbmciOiB7ImNvbG9yIjogeyJjb25kaXRpb24iOiB7InRlc3QiOiAiKGRhdHVtLldpamsgPT09ICdMaWVzJykiLCAidmFsdWUiOiAiUmVkIn0sICJ2YWx1ZSI6ICJsaWdodGdyZXkifSwgImNvbHVtbiI6IHsiZmllbGQiOiAidmFyaWFibGUiLCAiaGVhZGVyIjogeyJsYWJlbEZvbnRXZWlnaHQiOiA2MDB9LCAic3BhY2luZyI6IDEyLCAidGl0bGUiOiBudWxsLCAidHlwZSI6ICJub21pbmFsIn0sICJ0b29sdGlwIjogW3siZmllbGQiOiAiV2lqayIsICJ0aXRsZSI6ICJHZWJpZWQiLCAidHlwZSI6ICJub21pbmFsIn0sIHsiZmllbGQiOiAidmFsdWUiLCAidGl0bGUiOiAiQWFudGFsIiwgInR5cGUiOiAicXVhbnRpdGF0aXZlIn1dLCAieCI6IHsiYXhpcyI6IHsiZ3JpZCI6IGZhbHNlLCAibGFiZWxzIjogdHJ1ZSwgInRpY2tzIjogZmFsc2V9LCAiZmllbGQiOiAiV2lqayIsICJ0aXRsZSI6IG51bGwsICJ0eXBlIjogIm5vbWluYWwifSwgInkiOiB7ImF4aXMiOiB7ImdyaWQiOiBmYWxzZSwgImxhYmVscyI6IHRydWUsICJ0aWNrcyI6IGZhbHNlfSwgImZpZWxkIjogInZhbHVlIiwgInNjYWxlIjogeyJkb21haW4iOiBbMCwgNl19LCAidGl0bGUiOiAiQWFudGFsIiwgInR5cGUiOiAicXVhbnRpdGF0aXZlIn19LCAiaGVpZ2h0IjogMjAwLCAidGl0bGUiOiB7InRleHQiOiAiTGllcyIsICJhbmNob3IiOiAic3RhcnQiLCAiZm9udFNpemUiOiAyOCwgInN1YnRpdGxlIjogIiAifSwgIndpZHRoIjogMTgwLCAiJHNjaGVtYSI6ICJodHRwczovL3ZlZ2EuZ2l0aHViLmlvL3NjaGVtYS92ZWdhLWxpdGUvdjUuOC4wLmpzb24iLCAiZGF0YXNldHMiOiB7ImRhdGEtODY4YjE5NDVjNTQ4MjgxZTBmOTIwMjllYzljOTUzZTUiOiBbeyJXaWprIjogIkJhYWlkdWluZW4iLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQiLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiT29zdGVyZW5kIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIldlc3QgVGVyc2NoZWxsaW5nIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIkxhbmRlcnVtIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIkZvcm1lcnVtIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIGFhbiBaZWUiLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiV2VzdCBhYSBaZWUiLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTGllcyIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJIb29ybiIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJCYWFpZHVpbmVuIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQiLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJPb3N0ZXJlbmQiLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJXZXN0IFRlcnNjaGVsbGluZyIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiA1fSwgeyJXaWprIjogIkxhbmRlcnVtIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiRm9ybWVydW0iLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJNaWRzbGFuZCBhYW4gWmVlIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiV2VzdCBhYSBaZWUiLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMn0sIHsiV2lqayI6ICJMaWVzIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiSG9vcm4iLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMn0sIHsiV2lqayI6ICJCYWFpZHVpbmVuIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJNaWRzbGFuZCIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiT29zdGVyZW5kIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJXZXN0IFRlcnNjaGVsbGluZyIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTGFuZGVydW0iLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIkZvcm1lcnVtIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJNaWRzbGFuZCBhYW4gWmVlIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJXZXN0IGFhIFplZSIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDJ9LCB7IldpamsiOiAiTGllcyIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiSG9vcm4iLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIkJhYWlkdWluZW4iLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJPb3N0ZXJlbmQiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIldlc3QgVGVyc2NoZWxsaW5nIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJMYW5kZXJ1bSIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiRm9ybWVydW0iLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIGFhbiBaZWUiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIldlc3QgYWEgWmVlIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJMaWVzIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJIb29ybiIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDJ9XX19OwogICAgICB2YXIgZW1iZWRPcHQgPSB7Im1vZGUiOiAidmVnYS1saXRlIn07CgogICAgICBmdW5jdGlvbiBzaG93RXJyb3IoZWwsIGVycm9yKXsKICAgICAgICAgIGVsLmlubmVySFRNTCA9ICgnPGRpdiBzdHlsZT0iY29sb3I6cmVkOyI+JwogICAgICAgICAgICAgICAgICAgICAgICAgICsgJzxwPkphdmFTY3JpcHQgRXJyb3I6ICcgKyBlcnJvci5tZXNzYWdlICsgJzwvcD4nCiAgICAgICAgICAgICAgICAgICAgICAgICAgKyAiPHA+VGhpcyB1c3VhbGx5IG1lYW5zIHRoZXJlJ3MgYSB0eXBvIGluIHlvdXIgY2hhcnQgc3BlY2lmaWNhdGlvbi4gIgogICAgICAgICAgICAgICAgICAgICAgICAgICsgIlNlZSB0aGUgamF2YXNjcmlwdCBjb25zb2xlIGZvciB0aGUgZnVsbCB0cmFjZWJhY2suPC9wPiIKICAgICAgICAgICAgICAgICAgICAgICAgICArICc8L2Rpdj4nKTsKICAgICAgICAgIHRocm93IGVycm9yOwogICAgICB9CiAgICAgIGNvbnN0IGVsID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3ZpcycpOwogICAgICB2ZWdhRW1iZWQoIiN2aXMiLCBzcGVjLCBlbWJlZE9wdCkKICAgICAgICAuY2F0Y2goZXJyb3IgPT4gc2hvd0Vycm9yKGVsLCBlcnJvcikpOwogICAgfSkodmVnYUVtYmVkKTsKCiAgPC9zY3JpcHQ+CjwvYm9keT4KPC9odG1sPg==" width="840" style="border:none !important;" height="400"></iframe>`)[0];
+                popup_9a390ffeee192d79d993b2ae363e89b1.setContent(i_frame_2c9762c7fb816169324a9801e0f44c91);
+            
+        
+
+        geo_json_47dee461e71ef623914dbcf706e99ab2.bindPopup(popup_9a390ffeee192d79d993b2ae363e89b1)
+        ;
+
+        
+    
+    
+            geo_json_47dee461e71ef623914dbcf706e99ab2.addTo(feature_group_ddd72be1019de98820d62b263c11b898);
+        
+    
+        function geo_json_e2c80572c58e7eb9d699ff66fa093588_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "red", "fillOpacity": 0.5, "weight": 0.4};
+            }
+        }
+
+        function geo_json_e2c80572c58e7eb9d699ff66fa093588_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e2c80572c58e7eb9d699ff66fa093588 = L.geoJson(null, {
+                onEachFeature: geo_json_e2c80572c58e7eb9d699ff66fa093588_onEachFeature,
+            
+                style: geo_json_e2c80572c58e7eb9d699ff66fa093588_styler,
+        });
+
+        function geo_json_e2c80572c58e7eb9d699ff66fa093588_add (data) {
+            geo_json_e2c80572c58e7eb9d699ff66fa093588
+                .addData(data);
+        }
+            geo_json_e2c80572c58e7eb9d699ff66fa093588_add({"bbox": [5.334229978519204, 53.3942691033908, 5.35441726283787, 53.40027143467293], "features": [{"bbox": [5.334229978519204, 53.3942691033908, 5.35441726283787, 53.40027143467293], "geometry": {"coordinates": [[[5.334825313981781, 53.39536636696644], [5.336178349123742, 53.395108189846894], [5.337910234106147, 53.395043645322005], [5.338289083945256, 53.39475319374981], [5.3395879976820595, 53.39433364908996], [5.340562182983746, 53.3942691033908], [5.342131703749175, 53.3943013762528], [5.343863588730329, 53.39462410352573], [5.344621288409797, 53.39543091100188], [5.345649595117948, 53.39643133103084], [5.346461416202658, 53.39555999877879], [5.34846390821366, 53.39562454252024], [5.3492757292984265, 53.396334517217184], [5.3499251861674395, 53.39697993848171], [5.351115857091287, 53.396592686897776], [5.353930170187056, 53.39704448007001], [5.35441726283787, 53.397689890567165], [5.354146655810467, 53.39849663992385], [5.353064227695853, 53.39865798796001], [5.353010106290583, 53.39981967575994], [5.352090042394195, 53.39988421304099], [5.35133234271467, 53.39981967575994], [5.349167486486721, 53.399367912050735], [5.3478685727511674, 53.399690600903796], [5.346948508854723, 53.40027143467293], [5.345541352306213, 53.40001328730986], [5.345433109495758, 53.399303373986214], [5.343809467325087, 53.399303373986214], [5.34267291780526, 53.39949698788567], [5.34137400406965, 53.39923883582421], [5.341536368286654, 53.39856117921187], [5.340345697361499, 53.398335291276254], [5.338613812379151, 53.39788351180786], [5.335691256472927, 53.39781897149206], [5.334608828359592, 53.397593079616655], [5.334229978519204, 53.396528144624284], [5.334825313981781, 53.39536636696644]]], "type": "Polygon"}, "id": "9", "properties": {"Wijk": "Hoorn", "kraamverblijf": 1, "paarverblijf": 2, "winterverblijf": 0, "zommerverblijf": 2}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_e2c80572c58e7eb9d699ff66fa093588.bindTooltip(
+                `<div style="background-color: white; color: black; font-family:courier new; font-size: 14px; padding: 10px;">
+                     Klik op de veelhoek om de grafiek te zien
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+        var popup_e7d008654a35b4478216df2f436d2f7a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var i_frame_41912abbf76eeef874040b7fc7ab741e = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8IURPQ1RZUEUgaHRtbD4KPGh0bWw+CjxoZWFkPgogIDxzdHlsZT4KICAgICN2aXMudmVnYS1lbWJlZCB7CiAgICAgIHdpZHRoOiAxMDAlOwogICAgICBkaXNwbGF5OiBmbGV4OwogICAgfQoKICAgICN2aXMudmVnYS1lbWJlZCBkZXRhaWxzLAogICAgI3Zpcy52ZWdhLWVtYmVkIGRldGFpbHMgc3VtbWFyeSB7CiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTsKICAgIH0KICA8L3N0eWxlPgogIDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9ucG0vdmVnYUA1Ij48L3NjcmlwdD4KICA8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL3ZlZ2EtbGl0ZUA1LjguMCI+PC9zY3JpcHQ+CiAgPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS92ZWdhLWVtYmVkQDYiPjwvc2NyaXB0Pgo8L2hlYWQ+Cjxib2R5PgogIDxkaXYgaWQ9InZpcyI+PC9kaXY+CiAgPHNjcmlwdD4KICAgIChmdW5jdGlvbih2ZWdhRW1iZWQpIHsKICAgICAgdmFyIHNwZWMgPSB7ImNvbmZpZyI6IHsidmlldyI6IHsiY29udGludW91c1dpZHRoIjogMzAwLCAiY29udGludW91c0hlaWdodCI6IDMwMCwgInN0cm9rZSI6IG51bGx9fSwgImRhdGEiOiB7Im5hbWUiOiAiZGF0YS04NjhiMTk0NWM1NDgyODFlMGY5MjAyOWVjOWM5NTNlNSJ9LCAibWFyayI6IHsidHlwZSI6ICJiYXIiLCAiY29ybmVyUmFkaXVzVG9wTGVmdCI6IDgsICJjb3JuZXJSYWRpdXNUb3BSaWdodCI6IDh9LCAiZW5jb2RpbmciOiB7ImNvbG9yIjogeyJjb25kaXRpb24iOiB7InRlc3QiOiAiKGRhdHVtLldpamsgPT09ICdIb29ybicpIiwgInZhbHVlIjogIlJlZCJ9LCAidmFsdWUiOiAibGlnaHRncmV5In0sICJjb2x1bW4iOiB7ImZpZWxkIjogInZhcmlhYmxlIiwgImhlYWRlciI6IHsibGFiZWxGb250V2VpZ2h0IjogNjAwfSwgInNwYWNpbmciOiAxMiwgInRpdGxlIjogbnVsbCwgInR5cGUiOiAibm9taW5hbCJ9LCAidG9vbHRpcCI6IFt7ImZpZWxkIjogIldpamsiLCAidGl0bGUiOiAiR2ViaWVkIiwgInR5cGUiOiAibm9taW5hbCJ9LCB7ImZpZWxkIjogInZhbHVlIiwgInRpdGxlIjogIkFhbnRhbCIsICJ0eXBlIjogInF1YW50aXRhdGl2ZSJ9XSwgIngiOiB7ImF4aXMiOiB7ImdyaWQiOiBmYWxzZSwgImxhYmVscyI6IHRydWUsICJ0aWNrcyI6IGZhbHNlfSwgImZpZWxkIjogIldpamsiLCAidGl0bGUiOiBudWxsLCAidHlwZSI6ICJub21pbmFsIn0sICJ5IjogeyJheGlzIjogeyJncmlkIjogZmFsc2UsICJsYWJlbHMiOiB0cnVlLCAidGlja3MiOiBmYWxzZX0sICJmaWVsZCI6ICJ2YWx1ZSIsICJzY2FsZSI6IHsiZG9tYWluIjogWzAsIDZdfSwgInRpdGxlIjogIkFhbnRhbCIsICJ0eXBlIjogInF1YW50aXRhdGl2ZSJ9fSwgImhlaWdodCI6IDIwMCwgInRpdGxlIjogeyJ0ZXh0IjogIkhvb3JuIiwgImFuY2hvciI6ICJzdGFydCIsICJmb250U2l6ZSI6IDI4LCAic3VidGl0bGUiOiAiICJ9LCAid2lkdGgiOiAxODAsICIkc2NoZW1hIjogImh0dHBzOi8vdmVnYS5naXRodWIuaW8vc2NoZW1hL3ZlZ2EtbGl0ZS92NS44LjAuanNvbiIsICJkYXRhc2V0cyI6IHsiZGF0YS04NjhiMTk0NWM1NDgyODFlMGY5MjAyOWVjOWM5NTNlNSI6IFt7IldpamsiOiAiQmFhaWR1aW5lbiIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJNaWRzbGFuZCIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJPb3N0ZXJlbmQiLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiV2VzdCBUZXJzY2hlbGxpbmciLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTGFuZGVydW0iLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiRm9ybWVydW0iLCAidmFyaWFibGUiOiAia3JhYW12ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQgYWFuIFplZSIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJXZXN0IGFhIFplZSIsICJ2YXJpYWJsZSI6ICJrcmFhbXZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJMaWVzIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkhvb3JuIiwgInZhcmlhYmxlIjogImtyYWFtdmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkJhYWlkdWluZW4iLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJNaWRzbGFuZCIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIk9vc3RlcmVuZCIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIldlc3QgVGVyc2NoZWxsaW5nIiwgInZhcmlhYmxlIjogInBhYXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDV9LCB7IldpamsiOiAiTGFuZGVydW0iLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJGb3JtZXJ1bSIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIk1pZHNsYW5kIGFhbiBaZWUiLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJXZXN0IGFhIFplZSIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAyfSwgeyJXaWprIjogIkxpZXMiLCAidmFyaWFibGUiOiAicGFhcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJIb29ybiIsICJ2YXJpYWJsZSI6ICJwYWFydmVyYmxpamYiLCAidmFsdWUiOiAyfSwgeyJXaWprIjogIkJhYWlkdWluZW4iLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJPb3N0ZXJlbmQiLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIldlc3QgVGVyc2NoZWxsaW5nIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJMYW5kZXJ1bSIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiRm9ybWVydW0iLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk1pZHNsYW5kIGFhbiBaZWUiLCAidmFyaWFibGUiOiAid2ludGVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIldlc3QgYWEgWmVlIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMn0sIHsiV2lqayI6ICJMaWVzIiwgInZhcmlhYmxlIjogIndpbnRlcnZlcmJsaWpmIiwgInZhbHVlIjogMH0sIHsiV2lqayI6ICJIb29ybiIsICJ2YXJpYWJsZSI6ICJ3aW50ZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiQmFhaWR1aW5lbiIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIk9vc3RlcmVuZCIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDF9LCB7IldpamsiOiAiV2VzdCBUZXJzY2hlbGxpbmciLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAwfSwgeyJXaWprIjogIkxhbmRlcnVtIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMX0sIHsiV2lqayI6ICJGb3JtZXJ1bSIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiTWlkc2xhbmQgYWFuIFplZSIsICJ2YXJpYWJsZSI6ICJ6b21tZXJ2ZXJibGlqZiIsICJ2YWx1ZSI6IDB9LCB7IldpamsiOiAiV2VzdCBhYSBaZWUiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkxpZXMiLCAidmFyaWFibGUiOiAiem9tbWVydmVyYmxpamYiLCAidmFsdWUiOiAxfSwgeyJXaWprIjogIkhvb3JuIiwgInZhcmlhYmxlIjogInpvbW1lcnZlcmJsaWpmIiwgInZhbHVlIjogMn1dfX07CiAgICAgIHZhciBlbWJlZE9wdCA9IHsibW9kZSI6ICJ2ZWdhLWxpdGUifTsKCiAgICAgIGZ1bmN0aW9uIHNob3dFcnJvcihlbCwgZXJyb3IpewogICAgICAgICAgZWwuaW5uZXJIVE1MID0gKCc8ZGl2IHN0eWxlPSJjb2xvcjpyZWQ7Ij4nCiAgICAgICAgICAgICAgICAgICAgICAgICAgKyAnPHA+SmF2YVNjcmlwdCBFcnJvcjogJyArIGVycm9yLm1lc3NhZ2UgKyAnPC9wPicKICAgICAgICAgICAgICAgICAgICAgICAgICArICI8cD5UaGlzIHVzdWFsbHkgbWVhbnMgdGhlcmUncyBhIHR5cG8gaW4geW91ciBjaGFydCBzcGVjaWZpY2F0aW9uLiAiCiAgICAgICAgICAgICAgICAgICAgICAgICAgKyAiU2VlIHRoZSBqYXZhc2NyaXB0IGNvbnNvbGUgZm9yIHRoZSBmdWxsIHRyYWNlYmFjay48L3A+IgogICAgICAgICAgICAgICAgICAgICAgICAgICsgJzwvZGl2PicpOwogICAgICAgICAgdGhyb3cgZXJyb3I7CiAgICAgIH0KICAgICAgY29uc3QgZWwgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgndmlzJyk7CiAgICAgIHZlZ2FFbWJlZCgiI3ZpcyIsIHNwZWMsIGVtYmVkT3B0KQogICAgICAgIC5jYXRjaChlcnJvciA9PiBzaG93RXJyb3IoZWwsIGVycm9yKSk7CiAgICB9KSh2ZWdhRW1iZWQpOwoKICA8L3NjcmlwdD4KPC9ib2R5Pgo8L2h0bWw+" width="840" style="border:none !important;" height="400"></iframe>`)[0];
+                popup_e7d008654a35b4478216df2f436d2f7a.setContent(i_frame_41912abbf76eeef874040b7fc7ab741e);
+            
+        
+
+        geo_json_e2c80572c58e7eb9d699ff66fa093588.bindPopup(popup_e7d008654a35b4478216df2f436d2f7a)
+        ;
+
+        
+    
+    
+            geo_json_e2c80572c58e7eb9d699ff66fa093588.addTo(feature_group_ddd72be1019de98820d62b263c11b898);
+        
+    
+            var tile_layer_c85cad3048db7ce12fb28fd2035ae770 = L.tileLayer(
+                "https://api.mapbox.com/styles/v1/jeggino/clidbtqqh002k01pf4omn2xqa/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiamVnZ2lubyIsImEiOiJjbHdscmRkZHAxMTl1MmlyeTJpb3Z2eHdzIn0.N9TRN7xxTikk235dVs1YeQ",
+                {"attribution": "XXX Mapbox Attribution", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_c85cad3048db7ce12fb28fd2035ae770.addTo(feature_group_ddd72be1019de98820d62b263c11b898);
+        
+    
+            var feature_group_0749a60158918f93f7a58214d1745a13 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_ada2773bb08dcd85e60d64a1189de73a = L.marker(
+                [53.399064181721116, 5.258662937655919],
+                {}
+            ).addTo(feature_group_0749a60158918f93f7a58214d1745a13);
+        
+    
+            var icon_f8efaa0c0dcc955f1a651e781cbfded2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "snowflake", "iconColor": "green", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_ada2773bb08dcd85e60d64a1189de73a.setIcon(icon_f8efaa0c0dcc955f1a651e781cbfded2);
+        
+    
+        var popup_72ea9f909d9f16adfea7b3adefe2c43c = L.popup({"maxWidth": 320});
+
+        
+            
+                marker_ada2773bb08dcd85e60d64a1189de73a.once('click', function() {
+                    popup_72ea9f909d9f16adfea7b3adefe2c43c.setContent($(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aWZyYW1lIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBzcmM9aHR0cHM6Ly93d3cueW91dHViZS5jb20vZW1iZWQvSEdNU1ZHeVBwdzA/c2k9OXFJbTQ3eVdCYTN4VU1zciB0aXRsZT0iWW91VHViZSB2aWRlbyBwbGF5ZXIiIAogICAgZnJhbWVib3JkZXI9IjAiIGFsbG93PSJhY2NlbGVyb21ldGVyOyBhdXRvcGxheTsgY2xpcGJvYXJkLXdyaXRlOyBlbmNyeXB0ZWQtbWVkaWE7IGd5cm9zY29wZTsgCiAgICBwaWN0dXJlLWluLXBpY3R1cmU7IHdlYi1zaGFyZSIgcmVmZXJyZXJwb2xpY3k9InN0cmljdC1vcmlnaW4td2hlbi1jcm9zcy1vcmlnaW4iIGFsbG93ZnVsbHNjcmVlbj4KICAgIDwvaWZyYW1lPg==" width="320" style="border:none !important;" height="320"></iframe>`)[0]);
+                });
+            
+        
+
+        marker_ada2773bb08dcd85e60d64a1189de73a.bindPopup(popup_72ea9f909d9f16adfea7b3adefe2c43c)
+        ;
+
+        
+    
+    
+            marker_ada2773bb08dcd85e60d64a1189de73a.bindTooltip(
+                `<div style="background-color: white; color: black; font-family:courier new; font-size: 14px; padding: 10px;">
+                     klik om de foto te zien
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_13f5509ead96a0850ef972e0eebaf062 = L.marker(
+                [53.365724357339964, 5.215596844636802],
+                {}
+            ).addTo(feature_group_0749a60158918f93f7a58214d1745a13);
+        
+    
+            var icon_df1aa3510c7e0a576d1b8cd090fcae78 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "circle", "iconColor": "green", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_13f5509ead96a0850ef972e0eebaf062.setIcon(icon_df1aa3510c7e0a576d1b8cd090fcae78);
+        
+    
+        var popup_a56b92eca533d04a5f4761a1676e0a8b = L.popup({"maxWidth": 320});
+
+        
+            
+                marker_13f5509ead96a0850ef972e0eebaf062.once('click', function() {
+                    popup_a56b92eca533d04a5f4761a1676e0a8b.setContent($(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICA8aWZyYW1lIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBzcmM9aHR0cHM6Ly93d3cueW91dHViZS5jb20vZW1iZWQvQWk5QnBZU1QzZ0E/c2k9TzRhSmxEOUxpc2I3QnRuQiB0aXRsZT0iWW91VHViZSB2aWRlbyBwbGF5ZXIiIAogICAgZnJhbWVib3JkZXI9IjAiIGFsbG93PSJhY2NlbGVyb21ldGVyOyBhdXRvcGxheTsgY2xpcGJvYXJkLXdyaXRlOyBlbmNyeXB0ZWQtbWVkaWE7IGd5cm9zY29wZTsgCiAgICBwaWN0dXJlLWluLXBpY3R1cmU7IHdlYi1zaGFyZSIgcmVmZXJyZXJwb2xpY3k9InN0cmljdC1vcmlnaW4td2hlbi1jcm9zcy1vcmlnaW4iIGFsbG93ZnVsbHNjcmVlbj4KICAgIDwvaWZyYW1lPg==" width="320" style="border:none !important;" height="320"></iframe>`)[0]);
+                });
+            
+        
+
+        marker_13f5509ead96a0850ef972e0eebaf062.bindPopup(popup_a56b92eca533d04a5f4761a1676e0a8b)
+        ;
+
+        
+    
+    
+            marker_13f5509ead96a0850ef972e0eebaf062.bindTooltip(
+                `<div style="background-color: white; color: black; font-family:courier new; font-size: 14px; padding: 10px;">
+                     klik om de foto te zien
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var tile_layer_9455b463c0cec2839dc061223397b513 = L.tileLayer(
+                "https://api.mapbox.com/styles/v1/jeggino/clicpe8pd000e01r1aplb4f3v/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiamVnZ2lubyIsImEiOiJjbHdscmRkZHAxMTl1MmlyeTJpb3Z2eHdzIn0.N9TRN7xxTikk235dVs1YeQ",
+                {"attribution": "XXX Mapbox Attribution", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_9455b463c0cec2839dc061223397b513.addTo(feature_group_0749a60158918f93f7a58214d1745a13);
+        
+    
+            L.control.layers.tree(
+                [
+{
+  "label": "\ud83e\udd87 Vleermuizen",
+  "collapsed": true,
+  "selectAllCheckbox": false,
+  "children": [
+{
+  "label": "\ud83d\udccc Waarnemingen",
+  "layer": feature_group_a25cca5b6c721611e83cb918b027331a,
+},
+{
+  "label": "\ud83c\udfe0 Gebieden",
+  "layer": feature_group_ddd72be1019de98820d62b263c11b898,
+},
+{
+  "label": "\ud83d\udcf7/\ud83d\udcf9 Media",
+  "selectAllCheckbox": false,
+  "collapsed": false,
+  "children": [
+{
+  "label": "Fotos",
+  "layer": feature_group_0749a60158918f93f7a58214d1745a13,
+},
+{
+  "label": "Video",
+  "layer": feature_group_0749a60158918f93f7a58214d1745a13,
+},
+],
+},
+],
+},
+{
+  "label": "\ud83e\udeb6 Vogels",
+  "collapsed": true,
+  "selectAllCheckbox": false,
+  "children": [
+{
+  "label": "\ud83d\udccc Waarnemingen",
+  "layer": feature_group_a25cca5b6c721611e83cb918b027331a,
+},
+{
+  "label": "\ud83c\udfe0 Gebieden",
+  "layer": feature_group_ddd72be1019de98820d62b263c11b898,
+},
+{
+  "label": "\ud83d\udcf7/\ud83d\udcf9 Media",
+  "selectAllCheckbox": false,
+  "collapsed": false,
+  "children": [
+{
+  "label": "Fotos",
+  "layer": feature_group_0749a60158918f93f7a58214d1745a13,
+},
+{
+  "label": "Video",
+  "layer": feature_group_0749a60158918f93f7a58214d1745a13,
+},
+],
+},
+],
+},
+],
+                null,
+                {"closedSymbol": "+", "collapseAll": "", "collapsed": false, "expandAll": "", "labelIsSelector": "both", "namedToggle": false, "openenedSymbol": "-", "selectorBack": false, "spaceSymbol": "\u0026nbsp;"}
+            ).addTo(map_51739c1f3b09f46b80fbdb47baf9d46b);
+        
+</script>
+</html>
