@@ -21,7 +21,7 @@ page_3 = st.Page("page/ratten_tershelling.py", title="Ratten in Terschelling",ic
 # page_5 = st.Page("page/smp_amsterdam.py", title="SMP Amterdam 2024",icon="📊" )
 
 #---APP---
-st.logo(IMAGE,  link=LINK, icon_image=IMAGE)
+st.logo(IMAGE,  link=LINK, icon_image=IMAGE,size="large")
 
 pg = st.navigation(
 {'Aplications and projects':[page_3,page_1
