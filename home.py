@@ -26,7 +26,6 @@ pages = {
   'Aplications and projects':[page_3,page_1],
   'SMP':[page_1]
         }
-pg = st.navigation(
-)
+pg = st.navigation(pages)
   
 pg.run()
