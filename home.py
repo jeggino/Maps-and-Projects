@@ -18,12 +18,13 @@ page_1 = st.Page("page/bunkers.py", title="Bunkers & Vleermuiskasten",icon="🦇
 # page_2 = st.Page("page/exotem_planten.py", title="Invasive plants",icon="✍️" )
 page_3 = st.Page("page/ratten_tershelling.py", title="Ratten in Terschelling",icon="🐀" )
 # page_4 = st.Page("page/smp_app.py", title="Field map",icon="📊" )
-# page_5 = st.Page("page/smp_amsterdam.py", title="SMP Amterdam 2024",icon="📊" )
+page_5 = st.Page("page/smp_terschelling.py", title="SMP Terschelling 2025",icon="📊" )
 
 #---APP---
 st.logo(IMAGE,  link=LINK, icon_image=IMAGE,size="large")
 pages = {
   'Aplications and projects':[page_1,page_3],
+  'SMPs Karten'[page_5]
         }
 pg = st.navigation(pages)
   
