@@ -27,7 +27,7 @@ pg = st.navigation(
 {'Aplications and projects':[page_3,page_1
                              # ,page_2,page_3,page_4
                             ],
-  # 'SMP';[page_5]
+  'SMP';[page_1]
 })
   
 pg.run()
