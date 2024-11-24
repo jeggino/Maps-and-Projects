@@ -22,6 +22,8 @@ link = "https://ratten-terschelling-dashboard.streamlit.app/"
 #---APP---
 st.title(title)
 
+"---"
+
 
 st.image(img)
 st.markdown(text)
