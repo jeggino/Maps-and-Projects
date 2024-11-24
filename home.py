@@ -24,7 +24,6 @@ page_3 = st.Page("page/ratten_tershelling.py", title="Ratten in Terschelling",ic
 st.logo(IMAGE,  link=LINK, icon_image=IMAGE,size="large")
 pages = {
   'Aplications and projects':[page_3,page_1],
-  'SMP':[page_1]
         }
 pg = st.navigation(pages)
   
