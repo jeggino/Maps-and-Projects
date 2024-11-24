@@ -1,0 +1,12 @@
+import streamlit as st
+
+#---LAYOUT---
+st.markdown(collapsedControl,unsafe_allow_html=True,)
+st.markdown(header_hidden,unsafe_allow_html=True)
+st.markdown(reduce_header_height_style, unsafe_allow_html=True)
+
+
+#---APP---
+st.html(
+    "<p><span style='text-decoration: line-through double red;'>Oops</span>!</p>"
+)
