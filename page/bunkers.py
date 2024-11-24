@@ -11,5 +11,5 @@ st.markdown(reduce_header_height_style, unsafe_allow_html=True)
 
 #---APP---
 st.html(
-    "<p><span style='text-decoration: line-through double red;'>Oops</span>!</p>"
+    "html/SMP-Terschelling-Bats.html"
 )
