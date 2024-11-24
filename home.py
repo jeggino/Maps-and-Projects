@@ -22,12 +22,11 @@ page_3 = st.Page("page/ratten_tershelling.py", title="Ratten in Terschelling",ic
 
 #---APP---
 st.logo(IMAGE,  link=LINK, icon_image=IMAGE,size="large")
-
-pg = st.navigation(
-{'Aplications and projects':[page_3,page_1
-                             # ,page_2,page_3,page_4
-                            ],
+pages = {
+  'Aplications and projects':[page_3,page_1],
   'SMP':[page_1]
-})
+        }
+pg = st.navigation(
+)
   
 pg.run()
