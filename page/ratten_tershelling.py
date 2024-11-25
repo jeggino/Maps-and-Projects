@@ -42,22 +42,22 @@ link = "https://ratten-terschelling-dashboard.streamlit.app/"
 tab1, tab2, tab3, tab4 = st.tabs(["English 🇬🇧", "Nederlands 🇳🇱", "Español 🇪🇸", "Italiano 🇮🇹"])
 
 with tab1:
-  st.title(title_eng)
+  st.subheader(title_eng)
   st.image(img)
   st.markdown(text_eng)
 
 with tab2:
-  st.title(title_ned)
+  st.subheader(title_ned)
   st.image(img)
   st.markdown(text_ned)
 
 with tab3:
-  st.title(title_esp)
+  st.subheader(title_esp)
   st.image(img)
   st.markdown(text_esp)
 
 with tab4:
-  st.title(title_ita)
+  st.subheader(title_ita)
   st.image(img)
   st.markdown(text_ita)
 
