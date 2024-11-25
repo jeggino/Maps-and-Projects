@@ -22,7 +22,7 @@ img = "images/bunkers_1.jpg"
 link = "https://bunkers-vleermuizenkasten-dashboard.streamlit.app/"
 
 #---APP---
-st.title(title)
+st.subheader(title)
 
 
 st.image(img)
