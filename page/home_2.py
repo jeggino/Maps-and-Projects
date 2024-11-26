@@ -28,7 +28,7 @@ with st.expander("""Ongoing projects"""):
         """<a href="https://maps-and-projects.streamlit.app/bunkers">
         <img src="data:image/png;base64,{}" width="250">
         </a>
-        <br><font size="2" style="font-family:'Courier New'">Bunkers en vleermuizenkasten</font><br>
+        <br><font size="2" style="font-family:'Courier New'">Bunkers en vleermuizenkasten</font><be>
         """.format(
             base64.b64encode(open('images/bunkers_1.jpg', "rb").read()).decode()
         ),
@@ -39,7 +39,8 @@ with st.expander("""Ongoing projects"""):
         """<a href="https://maps-and-projects.streamlit.app/ratten_tershelling">
         <img src="data:image/png;base64,{}" width="250">
         </a>
-        <br><font size="2" style="font-family:'Courier New'">Ratten in Terschelling</font><br>""".format(
+        <br><font size="2" style="font-family:'Courier New'">Ratten in Terschelling</font><be>
+        """.format(
             base64.b64encode(open('images/rats_1.jpg', "rb").read()).decode()
         ),
         unsafe_allow_html=True,
