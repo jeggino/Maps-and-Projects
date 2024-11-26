@@ -26,7 +26,7 @@ with st.expander("Ongoing projects"):
     
     col_1.markdown(
         """<a href="https://bunkers-vleermuizenkasten-dashboard.streamlit.app/">
-        <img src="data:image/png;base64,{}" width="175"></a>
+        <img src="data:image/png;base64,{}" width="250"></a>
         <br><b>Ciao</b><br>
         """.format(
             base64.b64encode(open('images/bunkers_1.jpg', "rb").read()).decode()
@@ -36,7 +36,7 @@ with st.expander("Ongoing projects"):
     
     col_2.markdown(
         """<a href="https://ratten-terschelling-dashboard.streamlit.app/">
-        <img src="data:image/png;base64,{}" width="175">
+        <img src="data:image/png;base64,{}" width="250">
         </a>""".format(
             base64.b64encode(open('images/rats_1.jpg', "rb").read()).decode()
         ),
