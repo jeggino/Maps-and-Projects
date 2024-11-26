@@ -4,7 +4,9 @@ from constants import *
 import base64
 
 text= """
-Welcome to our dashboard! Here, you will find a friendly overview of our current and past projects. 
+Welcome to our dashboard! 
+
+Here, you will find a friendly overview of our current and past projects. 
 
 Each project includes a visual preview, a brief description, and a hyperlink that directs you to a real-time dashboard for the latest updates. 
 
@@ -17,7 +19,6 @@ st.markdown(
     """<a href="https://www.elskenecologie.nl/contact-elsken-ecologie-nh-terschelling/">
     <img src="data:image/png;base64,{}" width="250">
     </a>
-    <br><font size="2" style="font-family:'Courier New'">Bunkers en vleermuizenkasten</font><be>
     """.format(
         base64.b64encode(open(IMAGE, "rb").read()).decode()
     ),
