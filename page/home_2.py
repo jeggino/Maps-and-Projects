@@ -44,4 +44,6 @@ with st.expander("""<font size="5">Ongoing projects</font>"""):
         unsafe_allow_html=True,
     )
 
+    "---"
+
 "---"
