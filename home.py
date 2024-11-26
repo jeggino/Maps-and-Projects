@@ -30,6 +30,6 @@ pages = {
     "Your account": [page_1,page_3],
     "Resources": [page_5],
 }
-pg = st.navigation(pages)
+pg = st.navigation(pages,expanded=True)
   
 pg.run()
