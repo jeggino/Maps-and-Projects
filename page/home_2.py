@@ -27,8 +27,8 @@ with st.expander("Ongoing projects"):
     col_1.markdown(
         """<a href="https://bunkers-vleermuizenkasten-dashboard.streamlit.app/">
         <img src="data:image/png;base64,{}" width="175">
-        <b>Ciao</b>
-        </a>""".format(
+        </a>
+        <b>Ciao</b>""".format(
             base64.b64encode(open('images/bunkers_1.jpg', "rb").read()).decode()
         ),
         unsafe_allow_html=True,
