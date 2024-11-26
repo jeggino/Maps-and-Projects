@@ -19,3 +19,6 @@ img = IMAGE
 st.image(img,width=200)
 st.markdown(text)
 "---"
+
+img = Image.open(img)
+st.button(st.image(img))
