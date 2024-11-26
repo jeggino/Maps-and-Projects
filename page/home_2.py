@@ -19,6 +19,11 @@ img = IMAGE
 st.image(img,width=200)
 st.markdown(text)
 "---"
-
-# img = Image.open(img)
-st.button(st.image(img))
+st.sidebar.markdown(
+    """<a href="https://bunkers-vleermuizenkasten-dashboard.streamlit.app/">
+    <img src="data:image/png;base64,{}" width="25">
+    </a>""".format(
+        base64.b64encode(open(img, "rb").read()).decode()
+    ),
+    unsafe_allow_html=True,
+)
