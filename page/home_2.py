@@ -15,7 +15,7 @@ For past projects, we have also provided a download link so you can access relat
 :rainbow[Enjoy exploring!]
 """
 
-col_1,col_2,col_3 = st.columns(3)
+col_1,col_2,col_3 = st.columns(1,2,1)
 col_2.markdown(
     """<a href="https://www.elskenecologie.nl/contact-elsken-ecologie-nh-terschelling/">
     <img src="data:image/png;base64,{}" width="350">
