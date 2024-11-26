@@ -23,8 +23,9 @@ page_5 = st.Page("page/smp_terschelling.py", title="Terschelling 2025" )
 #---APP---
 st.logo(IMAGE,  link=LINK, icon_image=IMAGE,size="large")
 pages = {
+    'Old projects':[page_2],
   'On-going projects':[page_1,page_3],
-  'Old projects':[page_2]
+
         }
 pg = st.navigation(pages,expanded=True)
   
