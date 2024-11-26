@@ -19,16 +19,17 @@ st.markdown(
     """<a href="https://www.elskenecologie.nl/contact-elsken-ecologie-nh-terschelling/">
     <img src="data:image/png;base64,{}" width="250">
     </a>
+    <br><br>
     """.format(
         base64.b64encode(open(IMAGE, "rb").read()).decode()
     ),
     unsafe_allow_html=True,
 )
 
-#---APP---
+"---"
 
 st.markdown(text)
-"---"
+
 
 with st.expander("""Ongoing projects"""):
     col_1,col_2 = st.columns([1,1])
