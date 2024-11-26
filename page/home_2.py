@@ -46,6 +46,4 @@ with st.expander("""Ongoing projects"""):
         unsafe_allow_html=True,
     )
 
-    "---"
-
 "---"
