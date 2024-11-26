@@ -21,7 +21,7 @@ st.image(img,width=200)
 st.markdown(text)
 "---"
 
-with st.expander("Ongoing projects"):
+with st.expander("""<font size="5">Ongoing projects</font><be>"""):
     col_1,col_2 = st.columns([1,1])
     
     col_1.markdown(
