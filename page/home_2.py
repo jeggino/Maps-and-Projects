@@ -1,6 +1,7 @@
 import streamlit as st
 from css import *
 from constants import *
+import base64
 
 text= """
 Welcome to our dashboard! Here, you will find a friendly overview of our current and past projects. 
