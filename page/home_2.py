@@ -26,7 +26,6 @@ st.markdown(
 
 #---APP---
 
-st.image(img,width=200)
 st.markdown(text)
 "---"
 
