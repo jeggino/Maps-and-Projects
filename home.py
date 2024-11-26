@@ -22,10 +22,14 @@ page_5 = st.Page("page/smp_terschelling.py", title="SMP Terschelling 2025",icon=
 
 #---APP---
 st.logo(IMAGE,  link=LINK, icon_image=IMAGE,size="large")
+# pages = {
+#   'Aplications and projects':[page_1,page_3],
+#   'SMPs Karten':[page_5]
+#         }
 pages = {
-  'Aplications and projects':[page_1,page_3],
-  'SMPs Karten':[page_5]
-        }
+    "Your account": [page_1,page_3],
+    "Resources": [page_5],
+}
 pg = st.navigation(pages)
   
 pg.run()
