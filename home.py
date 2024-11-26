@@ -21,7 +21,7 @@ page_3 = st.Page("page/ratten_tershelling.py", title="Ratten in Terschelling" )
 page_5 = st.Page("page/smp_terschelling.py", title="Terschelling 2025" )
 
 #---APP---
-st.logo(IMAGE,  link=LINK, icon_image=IMAGE,size="large")
+# st.logo(IMAGE,  link=LINK, icon_image=IMAGE,size="large")
 pages = {
     'Old projects':[page_2],
   'On-going projects':[page_1,page_3],
