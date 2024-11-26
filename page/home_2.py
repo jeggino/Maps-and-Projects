@@ -16,6 +16,6 @@ img = IMAGE
 
 #---APP---
 
-st.image(img)
+st.image(img,width=200)
 st.markdown(text)
 "---"
