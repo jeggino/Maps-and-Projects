@@ -15,7 +15,7 @@ st.markdown(reduce_header_height_style, unsafe_allow_html=True)
 
 #---APP---
 page_1 = st.Page("page/bunkers.py", title="Bunkers & Vleermuiskasten" )
-# page_2 = st.Page("page/exotem_planten.py", title="Invasive plants",icon="✍️" )
+page_2 = st.Page("page/home_2.py", title="Home")
 page_3 = st.Page("page/ratten_tershelling.py", title="Ratten in Terschelling" )
 # page_4 = st.Page("page/smp_app.py", title="Field map",icon="📊" )
 page_5 = st.Page("page/smp_terschelling.py", title="Terschelling 2025" )
@@ -24,7 +24,7 @@ page_5 = st.Page("page/smp_terschelling.py", title="Terschelling 2025" )
 st.logo(IMAGE,  link=LINK, icon_image=IMAGE,size="large")
 pages = {
   'On-going projects':[page_1,page_3],
-  # 'Old projects':[page_5]
+  'Old projects':[page_2]
         }
 pg = st.navigation(pages,expanded=True)
   
