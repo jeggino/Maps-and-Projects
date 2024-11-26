@@ -74,6 +74,6 @@ with tab4:
   st.markdown(text_ita)
 
 st.link_button(":rainbow[Link dashboard]", link,icon='🦇')
-st.link_button(":rainbow[Home]", "page/home_2.py",icon='🦇')
+st.link_button(":rainbow[Home]", "https://maps-and-projects.streamlit.app/",icon='🦇')
 "---"
 
