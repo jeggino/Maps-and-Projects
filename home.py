@@ -27,6 +27,6 @@ pages = {
   'On-going projects':[page_1,page_3],
 
         }
-pg = st.navigation(pages,expanded=False)
+pg = st.navigation(pages,expanded=False,position ='hidden')
   
 pg.run()
