@@ -20,11 +20,23 @@ img = IMAGE
 st.image(img,width=200)
 st.markdown(text)
 "---"
-st.sidebar.markdown(
+
+col_1,col_2 = st.columns([1,1])
+
+col_1.markdown(
     """<a href="https://bunkers-vleermuizenkasten-dashboard.streamlit.app/">
-    <img src="data:image/png;base64,{}" width="25">
+    <img src="data:image/png;base64,{}" width="75">
     </a>""".format(
-        base64.b64encode(open(img, "rb").read()).decode()
+        base64.b64encode(open('images/bunkers_1.jpg', "rb").read()).decode()
+    ),
+    unsafe_allow_html=True,
+)
+
+col_2.markdown(
+    """<a href="https://ratten-terschelling-dashboard.streamlit.app/">
+    <img src="data:image/png;base64,{}" width="75">
+    </a>""".format(
+        base64.b64encode(open('images/rats_1.jpg', "rb").read()).decode()
     ),
     unsafe_allow_html=True,
 )
