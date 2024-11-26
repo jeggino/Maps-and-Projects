@@ -26,8 +26,9 @@ with st.expander("""Ongoing projects"""):
     
     col_1.markdown(
         """<a href="https://maps-and-projects.streamlit.app/bunkers">
-        <img src="data:image/png;base64,{}" width="250"></a>
-        <br><style="font-family:'Courier New'" font size="2">Bunkers en vleermuizenkasten</font><br>
+        <img src="data:image/png;base64,{}" width="250">
+        </a>
+        <br><font size="2" style="font-family:'Courier New'">Bunkers en vleermuizenkasten</font><br>
         """.format(
             base64.b64encode(open('images/bunkers_1.jpg', "rb").read()).decode()
         ),
