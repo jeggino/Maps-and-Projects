@@ -35,7 +35,7 @@ with st.expander("Ongoing projects"):
     )
     
     col_2.markdown(
-        """<a href="https://ratten-terschelling-dashboard.streamlit.app/">
+        """<a href="https://maps-and-projects.streamlit.app/ratten_tershelling">
         <img src="data:image/png;base64,{}" width="250">
         </a>
         <br><font size="2">Ratten in Terschelling</font><br>""".format(
