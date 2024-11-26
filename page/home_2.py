@@ -13,7 +13,16 @@ For past projects, we have also provided a download link so you can access relat
 :rainbow[Enjoy exploring!]
 """
 
-img = IMAGE
+st.markdown(
+    """<a href="https://www.elskenecologie.nl/contact-elsken-ecologie-nh-terschelling/">
+    <img src="data:image/png;base64,{}" width="250">
+    </a>
+    <br><font size="2" style="font-family:'Courier New'">Bunkers en vleermuizenkasten</font><be>
+    """.format(
+        base64.b64encode(open(IMAGE, "rb").read()).decode()
+    ),
+    unsafe_allow_html=True,
+)
 
 #---APP---
 
