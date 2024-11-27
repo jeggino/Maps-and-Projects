@@ -29,7 +29,7 @@ pages = {
 
         }
 pg = st.navigation(pages,expanded=False
-                   # ,position ='hidden'
+                   ,position ='hidden'
                   )
   
 pg.run()
