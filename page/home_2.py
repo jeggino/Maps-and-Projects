@@ -38,7 +38,7 @@ st.markdown(text)
 "---"
 
 with st.expander("""`**Ongoing projects**`"""):
-    col_1,col_2,col_3 = st.columns([1,1])
+    col_1,col_2,col_3 = st.columns([1,1,1])
     
     col_1.markdown(
         """<a href="https://maps-and-projects.streamlit.app/bunkers">
