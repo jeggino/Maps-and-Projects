@@ -58,3 +58,7 @@ with st.expander("""`**Ongoing projects**`"""):
     )
 
 "---"
+
+st.expander("""`**Past projects**`""")
+st.expander("""`**Extras**`""")
+
