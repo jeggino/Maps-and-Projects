@@ -38,9 +38,10 @@ st.markdown(text)
 "---"
 
 with st.expander("""`**Ongoing projects**`"""):
-    col_1,col_2,col_3 = st.columns([1,1,1])
+    col_1_1,col_1_2 = st.columns([2])
+    col_2_1,col_2_2 = st.columns([2])
     
-    col_1.markdown(
+    col_1_1.markdown(
         """<a href="https://maps-and-projects.streamlit.app/bunkers">
         <img src="data:image/png;base64,{}" width="250">
         </a>
@@ -51,7 +52,7 @@ with st.expander("""`**Ongoing projects**`"""):
         unsafe_allow_html=True,
     )
     
-    col_2.markdown(
+    col_1_2.markdown(
         """<a href="https://maps-and-projects.streamlit.app/smp_terschelling.py">
         <img src="data:image/png;base64,{}" width="250">
         </a>
@@ -62,7 +63,7 @@ with st.expander("""`**Ongoing projects**`"""):
         unsafe_allow_html=True,
     )
 
-    col_3.markdown(
+    col_2_1.markdown(
         """<a href="https://maps-and-projects.streamlit.app/ratten_tershelling">
         <img src="data:image/png;base64,{}" width="250">
         </a>
