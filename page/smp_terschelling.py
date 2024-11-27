@@ -16,7 +16,7 @@ Next year, we are excited to start a project to monitor bats, swifts, and marten
 This initiative aims to collect crucial data on these species and contribute to conservation efforts.
 """
 img = "images/smp_terschelling.jpg"
-link = "html/SMP-Terschelling-Bats.html"
+link = "html/SMP-Terschelling.html"
 
 #---APP---
 st.title(title)
