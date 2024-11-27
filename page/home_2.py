@@ -64,7 +64,7 @@ with st.expander("""`**Ongoing projects**`"""):
     )
 
     col_2_1.markdown(
-        """<a href="https://maps-and-projects.streamlit.app/smp_terschelling.py">
+        """<a href="https://maps-and-projects.streamlit.app/smp_terschelling">
         <img src="data:image/png;base64,{}" width="250">
         </a>
         <br><font size="2" style="font-family:'Courier New'">SMP in Terschelling - 2025</font><be>
