@@ -85,10 +85,10 @@ with st.expander("""`**Extras**`"""):
 
 "---"
 
-col_1,col_2,col_3 = st.columns([1,5,1])
+col_1,col_2,col_3 = st.columns([1,4,1])
 col_3.markdown(
     """<a href="https://www.elskenecologie.nl/contact-elsken-ecologie-nh-terschelling/">
-    <br>Contact us ✌️✌️✌️<br></a>
+    <br size=1>Contact us ✌️✌️✌️<br></a>
     """,
     unsafe_allow_html=True,
 )
