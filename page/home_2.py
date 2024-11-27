@@ -20,16 +20,17 @@ For past projects, we have also provided a download link so you can access relat
 """
 
 col_1,col_2,col_3 = st.columns([1,2,1])
-col_2.markdown(
-    """<a href="https://www.elskenecologie.nl/contact-elsken-ecologie-nh-terschelling/">
-    <img src="data:image/png;base64,{}" width="350">
-    </a>
-    <br><br>
-    """.format(
-        base64.b64encode(open(IMAGE, "rb").read()).decode()
-    ),
-    unsafe_allow_html=True,
-)
+col_2.image(IMAGE,width="350")
+# col_2.markdown(
+#     """<a href="https://www.elskenecologie.nl/contact-elsken-ecologie-nh-terschelling/">
+#     <img src="data:image/png;base64,{}" width="350">
+#     </a>
+#     <br><br>
+#     """.format(
+#         base64.b64encode(open(IMAGE, "rb").read()).decode()
+#     ),
+#     unsafe_allow_html=True,
+# )
 
 "---"
 
@@ -83,4 +84,15 @@ with st.expander("""`**Extras**`"""):
     st.write('')
 
 "---"
+
+col_1,col_2,col_3 = st.columns([1,5,1])
+col_2.markdown(
+    """<a href="https://www.elskenecologie.nl/contact-elsken-ecologie-nh-terschelling/">
+    </a>
+    <br>Contact us ✌️✌️✌️<br>
+    """.format(
+        base64.b64encode(open(IMAGE, "rb").read()).decode()
+    ),
+    unsafe_allow_html=True,
+)
 
