@@ -15,38 +15,37 @@ link = "https://bunkers-vleermuizenkasten-dashboard.streamlit.app/"
 
 title_eng = "Bunker & bat box mapping project"
 text_eng = """
-The Bunker and Batbox Mapping Project is a dedicated initiative focused on thoroughly documenting and analyzing the distribution of bat roosts on the island of Terchelling during the crucial hibernation period. This project involves meticulously mapping the locations of various bunkers and batboxes scattered across the island. Alongside the mapping, we conduct extensive surveys that not only identify the bat species encountered but also record important environmental data, such as temperature and humidity levels observed at the time of each sighting.
+The Bunker and Batbox Mapping Project focuses on documenting bat roosts on Terchelling during hibernation. We are mapping the locations of bunkers and batboxes while conducting surveys to identify bat species and collect environmental data like temperature and humidity.
 
-Our primary objective is to uncover the intricate relationships between bat populations and their surrounding environmental features. By gaining insight into these dynamics, we hope to identify key characteristics that contribute to the survival and well-being of bat species in the area. 
+Our goal is to understand the relationship between bat populations and their environment, identifying key factors for their survival. 
 
-We warmly invite passionate ecologists and nature enthusiasts to join us in this collaborative research effort. If you're interested in being a part of this exciting project and wish to learn more about how you can get involved, please don’t hesitate to reach out to us for further information. Your involvement could make a significant difference in our understanding and conservation of these remarkable creatures.
-"""
+We invite ecologists and nature enthusiasts to join us in this research effort. If you're interested in participating or want to learn more, please reach out. Your contribution could significantly advance our understanding and conservation of bats."""
 
 title_ned = "Bunker & vleermuiskasten in kaart brengen project"
 text_ned = """
-Het Bunker and Batbox Mapping Project is een toegewijd initiatief dat zich richt op het grondig documenteren en analyseren van de verspreiding van vleermuisroostplaatsen op het eiland Terchelling tijdens de cruciale winterslaapperiode. Dit project omvat het nauwkeurig in kaart brengen van de locaties van verschillende bunkers en vleermuiskasten verspreid over het eiland. Naast het in kaart brengen voeren we uitgebreide onderzoeken uit die niet alleen de aangetroffen vleermuissoorten identificeren, maar ook belangrijke omgevingsgegevens vastleggen, zoals temperatuur- en vochtigheidsniveaus die op het moment van elke waarneming zijn waargenomen.
+Het Bunker and Batbox Mapping Project richt zich op het documenteren van vleermuisroosts op Terchelling tijdens de winterslaap. We brengen de locaties van bunkers en vleermuiskasten in kaart terwijl we onderzoeken uitvoeren om vleermuissoorten te identificeren en omgevingsgegevens zoals temperatuur en vochtigheid te verzamelen.
 
-Ons primaire doel is om de ingewikkelde relaties tussen vleermuispopulaties en hun omringende omgevingskenmerken te onthullen. Door inzicht te krijgen in deze dynamiek, hopen we belangrijke kenmerken te identificeren die bijdragen aan het voortbestaan ​​en welzijn van vleermuissoorten in het gebied.
+Ons doel is om de relatie tussen vleermuispopulaties en hun omgeving te begrijpen en sleutelfactoren voor hun overleving te identificeren.
 
-We nodigen gepassioneerde ecologen en natuurliefhebbers van harte uit om zich bij ons aan te sluiten in dit gezamenlijke onderzoeksproject. Als u geïnteresseerd bent om deel uit te maken van dit opwindende project en meer wilt weten over hoe u kunt meedoen, aarzel dan niet om contact met ons op te nemen voor meer informatie. Uw betrokkenheid kan een groot verschil maken in ons begrip en behoud van deze opmerkelijke wezens.
+We nodigen ecologen en natuurliefhebbers uit om zich bij ons aan te sluiten bij dit onderzoeksproject. Als u geïnteresseerd bent in deelname of meer wilt weten, neem dan contact met ons op. Uw bijdrage kan ons begrip en behoud van vleermuizen aanzienlijk vergroten.
 """
 
 title_ita = "Progetto di mappatura di bunker e batbox"
 text_ita = """
-Il Bunker and Batbox Mapping Project è un'iniziativa dedicata incentrata sulla documentazione e l'analisi approfondita della distribuzione dei rifugi dei pipistrelli sull'isola di Terchelling durante il cruciale periodo di letargo. Questo progetto prevede la mappatura meticolosa delle posizioni di vari bunker e batbox sparsi sull'isola. Oltre alla mappatura, conduciamo indagini approfondite che non solo identificano le specie di pipistrelli incontrate, ma registrano anche importanti dati ambientali, come i livelli di temperatura e umidità osservati al momento di ogni avvistamento.
+Il Bunker and Batbox Mapping Project si concentra sulla documentazione dei rifugi dei pipistrelli a Terchelling durante il letargo. Stiamo mappando le posizioni dei bunker e delle batbox mentre conduciamo indagini per identificare le specie di pipistrelli e raccogliere dati ambientali come temperatura e umidità.
 
-Il nostro obiettivo principale è scoprire le complesse relazioni tra le popolazioni di pipistrelli e le caratteristiche ambientali circostanti. Acquisendo informazioni su queste dinamiche, speriamo di identificare le caratteristiche chiave che contribuiscono alla sopravvivenza e al benessere delle specie di pipistrelli nella zona.
+Il nostro obiettivo è comprendere la relazione tra le popolazioni di pipistrelli e il loro ambiente, identificando i fattori chiave per la loro sopravvivenza.
 
-Invitiamo calorosamente ecologi appassionati e amanti della natura a unirsi a noi in questo sforzo di ricerca collaborativo. Se sei interessato a far parte di questo entusiasmante progetto e desideri saperne di più su come puoi essere coinvolto, non esitare a contattarci per ulteriori informazioni. Il tuo coinvolgimento potrebbe fare una differenza significativa nella nostra comprensione e conservazione di queste straordinarie creature.
+Invitiamo ecologi e amanti della natura a unirsi a noi in questo sforzo di ricerca. Se sei interessato a partecipare o vuoi saperne di più, contattaci. Il tuo contributo potrebbe far progredire significativamente la nostra comprensione e conservazione dei pipistrelli.
 """
 
 title_esp = "Proyecto de mapeo de búnkeres y cajas para murciélagos"
 text_esp = """
-El Proyecto de Mapeo de Búnkeres y Cajas para Murciélagos es una iniciativa dedicada a documentar y analizar minuciosamente la distribución de los refugios de murciélagos en la isla de Terchelling durante el crucial período de hibernación. Este proyecto implica mapear meticulosamente las ubicaciones de varios búnkeres y cajas para murciélagos dispersos por toda la isla. Junto con el mapeo, realizamos estudios exhaustivos que no solo identifican las especies de murciélagos encontradas, sino que también registran datos ambientales importantes, como los niveles de temperatura y humedad observados en el momento de cada avistamiento.
+El proyecto de mapeo de búnkeres y cajas para murciélagos se centra en documentar los refugios de murciélagos en Terchelling durante la hibernación. Estamos mapeando las ubicaciones de búnkeres y cajas para murciélagos mientras realizamos estudios para identificar especies de murciélagos y recolectar datos ambientales como temperatura y humedad.
 
-Nuestro objetivo principal es descubrir las intrincadas relaciones entre las poblaciones de murciélagos y las características ambientales que las rodean. Al obtener información sobre estas dinámicas, esperamos identificar características clave que contribuyen a la supervivencia y el bienestar de las especies de murciélagos en el área.
+Nuestro objetivo es comprender la relación entre las poblaciones de murciélagos y su entorno, identificando factores clave para su supervivencia.
 
-Invitamos cordialmente a los ecologistas apasionados y entusiastas de la naturaleza a unirse a nosotros en este esfuerzo de investigación colaborativa. Si está interesado en ser parte de este emocionante proyecto y desea obtener más información sobre cómo puede participar, no dude en comunicarse con nosotros para obtener más información. Su participación podría marcar una diferencia significativa en nuestra comprensión y conservación de estas notables criaturas.
+Invitamos a los ecologistas y entusiastas de la naturaleza a unirse a nosotros en este esfuerzo de investigación. Si está interesado en participar o desea obtener más información, comuníquese con nosotros. Su contribución podría hacer avanzar significativamente nuestra comprensión y conservación de los murciélagos.
 """
 
 
