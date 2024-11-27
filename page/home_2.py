@@ -1,7 +1,6 @@
 
 
 import streamlit as st
-st.set_page_config(layout='wide')
 from css import *
 from constants import *
 import base64
