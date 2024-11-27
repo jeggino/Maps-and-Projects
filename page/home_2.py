@@ -1,9 +1,11 @@
+st.set_page_config(layout='wide')
+
 import streamlit as st
 from css import *
 from constants import *
 import base64
 
-st.set_page_config(layout='wide')
+
 
 text= """
 Welcome to our dashboard! 
