@@ -31,6 +31,7 @@ col_2.markdown(
 
 st.markdown(text)
 
+"---"
 
 with st.expander("""`**Ongoing projects**`"""):
     col_1,col_2 = st.columns([1,1])
@@ -57,10 +58,13 @@ with st.expander("""`**Ongoing projects**`"""):
         unsafe_allow_html=True,
     )
 
-"---"
+
 
 with st.expander("""`**Past projects**`"""):
     st.write("")
+    
 with st.expander("""`**Extras**`"""):
-    st.write('---')
+    st.write('')
+
+"---"
 
