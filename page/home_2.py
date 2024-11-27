@@ -67,7 +67,7 @@ with st.expander("""`**Ongoing projects**`"""):
         """<a href="https://maps-and-projects.streamlit.app/ratten_tershelling">
         <img src="data:image/png;base64,{}" width="250">
         </a>
-        <br><font size="2" style="font-family:'Courier New'">Ratten in Terschelling</font><be>
+        <br><font size="2" style="font-family:'Courier New'">SMP in Terschelling - 2025</font><be>
         """.format(
             base64.b64encode(open('images/rats_1.jpg', "rb").read()).decode()
         ),
