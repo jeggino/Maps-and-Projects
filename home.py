@@ -2,6 +2,7 @@ import streamlit as st
 from css import *
 from constants import *
 
+st.set_page_config(layout='wide')
 
 
 #---LAYOUT---
