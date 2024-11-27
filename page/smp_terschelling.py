@@ -12,7 +12,8 @@ st.markdown(reduce_header_height_style, unsafe_allow_html=True)
 #---COSTANTS---
 title = "SMP Terschelling 2025"
 text = """
-:rainbow[FAKE FAKE FAKE]
+Next year, we are excited to start a project to monitor bats, swifts, and martens on the beautiful island of Teskelling. 
+This initiative aims to collect crucial data on these species and contribute to conservation efforts.
 """
 img = "images/smp_terschelling.jpg"
 link = "html/SMP-Terschelling-Bats.html"
