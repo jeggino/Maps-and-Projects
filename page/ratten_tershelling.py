@@ -51,7 +51,7 @@ Esperamos que con el apoyo de la provincia de Frisia, nuestros esfuerzos logren 
 
 
 #---APP---
-tab1, tab2, tab3, tab4 = st.tabs(["English 🇬🇧", "Nederlands 🇳🇱", "Español 🇪🇸", "Italiano 🇮🇹"])
+tab1, tab2, tab3, tab4 = st.tabs(["🇬🇧", "🇳🇱", "🇪🇸", "🇮🇹"])
 
 with tab1:
   st.subheader(title_eng)
